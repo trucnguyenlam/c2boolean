@@ -1,0 +1,17 @@
+1. Based on SAT
+    a. CBMC
+    b. Mem model 1
+    c. Mem model 2
+
+2. Based on Boolector
+    a. CBMC
+    b. Mem model 1
+    c. Mem model 2
+
+
+Things can be improved:
+1. READ and WRITE
+2. Init MEM 
+    - Avoid eager
+3. Malloc
+4. Free (TODO)

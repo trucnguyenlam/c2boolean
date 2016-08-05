@@ -1,0 +1,1542 @@
+CBMC version 5.3 64-bit x86_64 linux
+Parsing regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c
+file <command-line> line 0: <command-line>:0:0: warning: "__STDC_VERSION__" redefined
+file <command-line> line 0: <built-in>: note: this is the location of the previous definition
+Converting
+Type-checking _cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_
+file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 557 function thread_0: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 59842 steps
+simple slicing removed 602 assignments
+Generated 24 VCC(s), 24 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+1351940 variables, 4983964 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 874.118s
+Building error trace
+
+Counterexample:
+
+State 327 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2776 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 331 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 336 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2777 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 341 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2664 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_pushCount=3 (00000000000000000000000000000011)
+
+State 344 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2666 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 345 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2666 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=3 (00000000000000000000000000000011)
+
+State 346 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  count=3 (00000000000000000000000000000011)
+
+State 350 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2667 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 351 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2667 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=0 (00000000000000000000000000000000)
+
+State 352 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  head=0 (00000000000000000000000000000000)
+
+State 354 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2668 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=0 (00000000000000000000000000000000)
+
+State 358 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2675 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 359 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2675 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (00000000000000000000000000000001)
+
+State 360 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[0]=1 (00000000000000000000000000000001)
+
+State 362 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2677 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=1 (00000000000000000000000000000001)
+
+State 366 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2684 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next + 1 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 367 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2684 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (00000000000000000000000000000010)
+
+State 368 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[1]=2 (00000000000000000000000000000010)
+
+State 370 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2686 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=2 (00000000000000000000000000000010)
+
+State 375 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2699 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next + 2 (0000010000000000000000000000000000000000000000000000000000001000)
+
+State 376 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2699 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=-1 (11111111111111111111111111111111)
+
+State 377 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[2]=-1 (11111111111111111111111111111111)
+
+State 380 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2704 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=0 (00000000000000000000000000000000)
+
+State 384 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2711 function main_thread thread 0
+----------------------------------------------------
+  id=threads (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 385 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2711 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 386 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2711 function main_thread thread 0
+----------------------------------------------------
+  t=thread_0 (0000011000000000000000000000000000000000000000000000000000000000)
+
+State 387 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2711 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 388 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2711 function main_thread thread 0
+----------------------------------------------------
+  threadID=1 (00000000000000000000000000000001)
+
+State 390 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[0]=1 (00000000000000000000000000000001)
+
+State 391 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[1]=1 (1)
+
+State 392 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[1]=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 395 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2713 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=1 (00000000000000000000000000000001)
+
+State 400 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2720 function main_thread thread 0
+----------------------------------------------------
+  id=threads + 1 (0000010100000000000000000000000000000000000000000000000000000100)
+
+State 401 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2720 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 402 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2720 function main_thread thread 0
+----------------------------------------------------
+  t=thread_1 (0000011100000000000000000000000000000000000000000000000000000000)
+
+State 403 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2720 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 404 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2720 function main_thread thread 0
+----------------------------------------------------
+  threadID=2 (00000000000000000000000000000010)
+
+State 406 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[1]=2 (00000000000000000000000000000010)
+
+State 407 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[2]=1 (1)
+
+State 408 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[2]=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 411 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2722 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=2 (00000000000000000000000000000010)
+
+State 416 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2729 function main_thread thread 0
+----------------------------------------------------
+  id=threads + 2 (0000010100000000000000000000000000000000000000000000000000001000)
+
+State 417 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2729 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 418 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2729 function main_thread thread 0
+----------------------------------------------------
+  t=thread_2 (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 419 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2729 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 420 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2729 function main_thread thread 0
+----------------------------------------------------
+  threadID=3 (00000000000000000000000000000011)
+
+State 422 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[2]=3 (00000000000000000000000000000011)
+
+State 423 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[3]=1 (1)
+
+State 424 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[3]=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 427 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2731 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=3 (00000000000000000000000000000011)
+
+State 430 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2735 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=0 (00000000000000000000000000000000)
+
+State 438 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2780 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 439 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2782 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 444 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 449 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2784 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 453 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2786 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 455 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 210 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=0 (00000000000000000000000000000000)
+
+State 456 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 211 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 461 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 218 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 465 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 218 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 470 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 226 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 473 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 226 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 613 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2787 function main thread 0
+----------------------------------------------------
+  pc[1]=3 (00000011)
+
+State 614 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2790 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 619 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 624 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2792 function main thread 0
+----------------------------------------------------
+  pc_cs=1 (000000001)
+
+State 628 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2794 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 630 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1029 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=1 (00000000000000000000000000000001)
+
+State 631 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1030 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 773 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2795 function main thread 0
+----------------------------------------------------
+  pc[2]=1 (00000001)
+
+State 774 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2798 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 779 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=62 (00111110)
+
+State 784 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2800 function main thread 0
+----------------------------------------------------
+  pc_cs=62 (000111110)
+
+State 788 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2802 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 790 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1846 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=2 (00000000000000000000000000000010)
+
+State 791 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1847 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 796 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1854 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 800 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1854 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 805 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1862 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 808 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1862 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 812 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1864 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 813 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1864 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111111111111111111111111111)
+
+State 814 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000000000000000000000000000001)
+
+State 815 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  array_Next[0]=-1 (11111111111111111111111111111111)
+
+State 818 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1864 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 820 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1868 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000000000000000000000000000)
+
+State 824 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1870 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 825 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1870 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0011000100000000000000000000000000000000000000000000000000000000)
+
+State 826 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1870 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 828 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000000000000000000000000000001)
+
+State 832 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1870 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 837 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1873 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 838 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1873 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 839 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=3 (00000000000000000000000000000011)
+
+State 840 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=2 (00000000000000000000000000000010)
+
+State 843 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1874 function thread_2 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000000000000000000000000000)
+
+State 846 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1956 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000000000000000000000000000)
+
+State 850 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2192 function thread_2 thread 0
+----------------------------------------------------
+  array_Value[0]=2 (00000000000000000000000000000010)
+
+State 853 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2196 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000000000000000000000000000)
+
+State 857 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2198 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 860 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2198 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000000000000000000000000000001)
+
+State 861 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2201 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 865 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2203 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 866 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2203 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (00000000000000000000000000000001)
+
+State 867 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[0]=1 (00000000000000000000000000000001)
+
+State 869 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2205 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 951 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2803 function main thread 0
+----------------------------------------------------
+  pc[3]=62 (00111110)
+
+State 952 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2807 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 957 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 962 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2809 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 975 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2812 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 976 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2815 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 981 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 986 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2817 function main thread 0
+----------------------------------------------------
+  pc_cs=6 (000000110)
+
+State 990 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2819 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 997 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 228 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 998 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 228 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111111111111111111111111111)
+
+State 999 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000000000000000000000000000001)
+
+State 1000 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  array_Next[0]=-1 (11111111111111111111111111111111)
+
+State 1003 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 228 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 1005 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 232 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000000000000000000000000000)
+
+State 1009 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 234 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1010 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 234 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 1011 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 234 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 1013 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 180 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000000000000000000000000000001)
+
+State 1017 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 234 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=FALSE (00000000)
+
+State 1156 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2820 function main thread 0
+----------------------------------------------------
+  pc[1]=6 (00000110)
+
+State 1157 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2823 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 1162 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=60 (00111100)
+
+State 1167 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2825 function main thread 0
+----------------------------------------------------
+  pc_cs=61 (000111101)
+
+State 1171 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2827 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1177 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1037 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1181 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1037 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1186 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1045 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1189 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1045 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000000000000000000000000000001)
+
+State 1193 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1047 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=array_Next + 1 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 1194 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1047 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111111111111111111111111111)
+
+State 1195 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (00000000000000000000000000000010)
+
+State 1196 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  array_Next[1]=-1 (11111111111111111111111111111111)
+
+State 1199 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1047 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=2 (00000000000000000000000000000010)
+
+State 1201 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1051 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000000000000000000000000000001)
+
+State 1205 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1053 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1206 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1053 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0001110100000000000000000000000000000000000000000000000000000000)
+
+State 1207 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1053 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=2 (00000000000000000000000000000010)
+
+State 1209 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=2 (00000000000000000000000000000010)
+
+State 1213 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1053 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 1218 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1056 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1219 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1056 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 1220 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000000000000000000000000000010)
+
+State 1221 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=1 (00000000000000000000000000000001)
+
+State 1224 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1057 function thread_1 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000000000000000000000000000001)
+
+State 1227 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1139 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000000000000000000000000000001)
+
+State 1231 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1375 function thread_1 thread 0
+----------------------------------------------------
+  array_Value[1]=1 (00000000000000000000000000000001)
+
+State 1234 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1379 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=1 (00000000000000000000000000000001)
+
+State 1238 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1381 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1241 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1381 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=2 (00000000000000000000000000000010)
+
+State 1242 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1384 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 1324 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2828 function main thread 0
+----------------------------------------------------
+  pc[2]=61 (00111101)
+
+State 1325 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2831 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 1330 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=9 (00001001)
+
+State 1335 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2833 function main thread 0
+----------------------------------------------------
+  pc_cs=71 (001000111)
+
+State 1339 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2835 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1406 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2210 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1407 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2210 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0011101000000000000000000000000000000000000000000000000000000000)
+
+State 1408 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2210 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 1410 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 180 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=2 (00000000000000000000000000000010)
+
+State 1415 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2210 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=TRUE (00000001)
+
+State 1420 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2217 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 1421 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2217 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (00000000000000000000000000000010)
+
+State 1422 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[0]=2 (00000000000000000000000000000010)
+
+State 1428 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2218 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1429 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2218 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0011101000000000000000000000000000000000000000000000000000000000)
+
+State 1430 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2218 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 1432 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=0 (00000000000000000000000000000000)
+
+State 1437 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2218 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 1443 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2241 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1444 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2241 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000000000000000000000000000001)
+
+State 1445 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 189 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (00000000000000000000000000000001)
+
+State 1446 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 190 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  count=2 (00000000000000000000000000000010)
+
+State 1450 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2247 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1455 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2254 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1459 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2254 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1532 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2836 function main thread 0
+----------------------------------------------------
+  pc[3]=71 (01000111)
+
+State 1533 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2840 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 1538 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 1543 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2842 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 1556 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2845 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 1557 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2848 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 1562 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=125 (01111101)
+
+State 1567 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2850 function main thread 0
+----------------------------------------------------
+  pc_cs=131 (010000011)
+
+State 1571 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2852 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1581 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 243 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 1582 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 243 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=1 (00000000000000000000000000000001)
+
+State 1583 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (00000000000000000000000000000010)
+
+State 1584 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  array_Next[0]=1 (00000000000000000000000000000001)
+
+State 1593 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 248 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1597 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 248 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1602 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 257 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1605 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 257 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 1609 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 259 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 1610 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 259 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111111111111111111111111111)
+
+State 1611 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000000000000000000000000000001)
+
+State 1612 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  array_Next[0]=-1 (11111111111111111111111111111111)
+
+State 1615 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 259 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 1617 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 263 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000000000000000000000000000)
+
+State 1621 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 265 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1622 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 265 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1623 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 265 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 1625 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000000000000000000000000000001)
+
+State 1629 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 265 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 1634 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 268 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1635 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 268 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 1636 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000000000000000000000000000010)
+
+State 1637 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=1 (00000000000000000000000000000001)
+
+State 1640 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 269 function thread_0 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000000000000000000000000000)
+
+State 1643 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 320 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000000000000000000000000000)
+
+State 1647 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 556 function thread_0 thread 0
+----------------------------------------------------
+  array_Value[0]=0 (00000000000000000000000000000000)
+
+State 1650 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 560 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000000000000000000000000000)
+
+State 1654 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 562 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1657 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 562 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000000000000000000000000000001)
+
+State 1658 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 565 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 1662 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 567 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 1663 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 567 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (00000000000000000000000000000001)
+
+State 1664 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[0]=1 (00000000000000000000000000000001)
+
+State 1666 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 569 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 1673 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 575 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1674 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 575 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0001001000000000000000000000000000000000000000000000000000000000)
+
+State 1675 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 575 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 1677 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=0 (00000000000000000000000000000000)
+
+State 1682 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 574 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 1688 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 607 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1689 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 607 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000000000000000000000000000001)
+
+State 1690 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 189 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (00000000000000000000000000000001)
+
+State 1691 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 190 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  count=2 (00000000000000000000000000000010)
+
+State 1695 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 613 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1700 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 620 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1704 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 620 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1709 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 628 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1712 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 628 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 1716 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 630 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 1717 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 630 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111111111111111111111111111)
+
+State 1718 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000000000000000000000000000001)
+
+State 1719 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  array_Next[0]=-1 (11111111111111111111111111111111)
+
+State 1722 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 630 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 1724 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 634 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000000000000000000000000000)
+
+State 1728 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 636 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1729 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 636 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0001001100000000000000000000000000000000000000000000000000000000)
+
+State 1730 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 636 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 1732 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000000000000000000000000000001)
+
+State 1736 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 636 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 1741 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 639 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1742 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 639 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 1743 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000000000000000000000000000010)
+
+State 1744 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=1 (00000000000000000000000000000001)
+
+State 1747 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 640 function thread_0 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000000000000000000000000000)
+
+State 1750 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 722 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000000000000000000000000000)
+
+State 1754 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 958 function thread_0 thread 0
+----------------------------------------------------
+  array_Value[0]=0 (00000000000000000000000000000000)
+
+State 1757 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 962 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000000000000000000000000000)
+
+State 1761 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 964 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1764 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 964 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000000000000000000000000000001)
+
+State 1765 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 967 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 1769 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 969 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 1770 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 969 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (00000000000000000000000000000001)
+
+State 1771 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[0]=1 (00000000000000000000000000000001)
+
+State 1773 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 971 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 1787 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2853 function main thread 0
+----------------------------------------------------
+  pc[1]=131 (10000011)
+
+State 1788 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2856 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 1793 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 1798 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2858 function main thread 0
+----------------------------------------------------
+  pc_cs=64 (001000000)
+
+State 1802 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2860 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1867 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1386 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next + 1 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 1868 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1386 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (00000000000000000000000000000010)
+
+State 1869 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[1]=2 (00000000000000000000000000000010)
+
+State 1871 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1388 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 1878 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1393 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1879 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1393 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010011000000000000000000000000000000000000000000000000000000000)
+
+State 1880 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1393 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 1882 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 180 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000000000000000000000000000001)
+
+State 1887 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1393 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=TRUE (00000001)
+
+State 1892 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1400 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next + 1 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 1893 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1400 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (00000000000000000000000000000001)
+
+State 1894 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[1]=1 (00000000000000000000000000000001)
+
+State 1974 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2861 function main thread 0
+----------------------------------------------------
+  pc[2]=64 (01000000)
+
+State 1975 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2864 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 1980 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=57 (00111001)
+
+State 1985 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2866 function main thread 0
+----------------------------------------------------
+  pc_cs=128 (010000000)
+
+State 1989 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2868 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 2064 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2262 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 2067 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2262 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000000000000000000000000000001)
+
+State 2071 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2264 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=array_Next + 1 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 2072 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2264 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111111111111111111111111111)
+
+State 2073 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000000000000000000000000000001)
+
+State 2074 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  array_Next[1]=-1 (11111111111111111111111111111111)
+
+State 2077 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2264 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 2079 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2268 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000000000000000000000000000001)
+
+State 2083 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2270 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 2084 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2270 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0011101100000000000000000000000000000000000000000000000000000000)
+
+State 2085 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2270 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 2087 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000000000000000000000000000001)
+
+State 2091 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2270 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 2096 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2273 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 2097 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2273 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 2098 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=1 (00000000000000000000000000000001)
+
+State 2099 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=0 (00000000000000000000000000000000)
+
+State 2102 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2274 function thread_2 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000000000000000000000000000001)
+
+State 2105 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2356 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000000000000000000000000000001)
+
+State 2109 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2592 function thread_2 thread 0
+----------------------------------------------------
+  array_Value[1]=2 (00000000000000000000000000000010)
+
+State 2124 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2869 function main thread 0
+----------------------------------------------------
+  pc[3]=128 (10000000)
+
+State 2125 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2873 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 2130 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 2135 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2875 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 2148 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2878 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 2149 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2881 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 2154 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=8 (00001000)
+
+State 2159 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2883 function main thread 0
+----------------------------------------------------
+  pc_cs=139 (010001011)
+
+State 2163 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2885 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 2299 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 976 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 2300 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 976 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0001110000000000000000000000000000000000000000000000000000000000)
+
+State 2301 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 976 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 2303 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=0 (00000000000000000000000000000000)
+
+State 2308 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 976 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 2314 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1007 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 2315 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1007 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000000000000000000000000000001)
+
+State 2316 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 189 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=0 (00000000000000000000000000000000)
+
+State 2317 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 190 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  count=1 (00000000000000000000000000000001)
+
+State 2321 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1013 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 2328 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2886 function main thread 0
+----------------------------------------------------
+  pc[1]=139 (10001011)
+
+State 2329 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2889 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 2334 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=64 (01000000)
+
+State 2339 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2891 function main thread 0
+----------------------------------------------------
+  pc_cs=128 (010000000)
+
+State 2343 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2893 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2412 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1401 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 2413 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1401 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010011000000000000000000000000000000000000000000000000000000000)
+
+State 2414 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1401 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 2416 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 180 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=0 (00000000000000000000000000000000)
+
+State 2421 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1401 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=TRUE (00000001)
+
+State 2426 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1409 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=array_Next + 1 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 2427 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1409 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=0 (00000000000000000000000000000000)
+
+State 2428 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  array_Next[1]=0 (00000000000000000000000000000000)
+
+State 2434 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1410 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 2435 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1410 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010011000000000000000000000000000000000000000000000000000000000)
+
+State 2436 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1410 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 2438 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000000000000000000000000000001)
+
+State 2443 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1410 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 2449 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1424 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 2450 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1424 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000000000000000000000000000001)
+
+State 2451 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 189 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (00000000000000000000000000000001)
+
+State 2452 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 190 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  count=2 (00000000000000000000000000000010)
+
+State 2456 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1430 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2461 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1437 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 2465 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1437 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 2470 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1445 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 2473 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1445 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000000000000000000000000000001)
+
+State 2477 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1447 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=array_Next + 1 (0000010000000000000000000000000000000000000000000000000000000100)
+
+State 2478 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1447 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111111111111111111111111111)
+
+State 2479 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (00000000000000000000000000000000)
+
+State 2480 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  array_Next[1]=-1 (11111111111111111111111111111111)
+
+State 2483 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1447 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=0 (00000000000000000000000000000000)
+
+State 2485 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1451 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000000000000000000000000000001)
+
+State 2489 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1453 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 2490 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1453 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0010011100000000000000000000000000000000000000000000000000000000)
+
+State 2491 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1453 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 2493 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=0 (00000000000000000000000000000000)
+
+State 2497 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1453 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 2502 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1456 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 2503 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1456 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 2504 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000000000000000000000000000010)
+
+State 2505 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=1 (00000000000000000000000000000001)
+
+State 2508 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1457 function thread_1 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000000000000000000000000000001)
+
+State 2511 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1539 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000000000000000000000000000001)
+
+State 2515 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 1775 function thread_1 thread 0
+----------------------------------------------------
+  array_Value[1]=1 (00000000000000000000000000000001)
+
+State 2530 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2894 function main thread 0
+----------------------------------------------------
+  pc[2]=128 (10000000)
+
+State 2531 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2897 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 2536 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=10 (00001010)
+
+State 2541 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2899 function main thread 0
+----------------------------------------------------
+  pc_cs=138 (010001010)
+
+State 2545 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2901 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+Violated property:
+  file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp_.c line 2593 function thread_2
+  assertion array_Value[(signed long int)__csLOCAL_thread_elem] == __csLOCAL_thread_idx
+  array_Value[(signed long int)__csLOCAL_thread_elem] == __csLOCAL_thread_idx
+
+VERIFICATION FAILED
+
+real    16m12.626s
+user    16m10.917s
+sys 0m0.232s

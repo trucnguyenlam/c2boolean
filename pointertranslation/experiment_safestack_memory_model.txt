@@ -1,0 +1,179 @@
+1. Full variable index
+    safestack_mem_ver6_fullvariable.c
+        - full indexed variables (even local varibles)
+
+    safestack_mem_ver6_fullvariable_bitvector.c
+        - full indexed variables
+        - __CPROVER_bitvector[5] for MEMORY_VALUE
+2. No local variable
+    safestack_mem_ver6_nolocal.c
+        - only global variable
+    safestack_mem_ver6_nolocal.simplified.c
+        - only global variable
+        - MEMORY_VALUE[stack + 0] is replaced by its value (3)
+    safestack_mem_ver6_nolocal_reducemultiply.c
+        - only global variable
+        - using multiplication expansion: 2 * (variable) = variable + variable
+        1542345 variables, 6260014 clauses
+        > 90m
+
+    safestack_mem_ver6_nolocal_bitvector.c
+        - only global variable
+        - __CPROVER_bitvector[4] for MEMORY_VALUE
+        574973 variables, 2230224 clauses
+        SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+        Runtime decision procedure: 4194.09s
+        real  71m32.720s
+        user  71m26.992s
+        sys 0m0.412s
+
+    safestack_mem_ver6_nolocal_bitvector_bitshift.c
+        - only global variable
+        - __CPROVER_bitvector[4] for MEMORY_VALUE
+        - using bitshift: 2 * (variable) = variable << 1
+
+    safestack_mem_ver6_nolocal_bitvector_nostackvar.c
+        - only global variable
+        - __CPROVER_bitvector[4] for MEMORY_VALUE
+        - remove   stack +   from code (since it is equal 0)
+        574973 variables, 2230224 clauses
+        SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+        Runtime decision procedure: 4627.77s
+        real  78m44.720s
+        user  78m34.332s
+        sys 0m3.707s
+
+    safestack_mem_ver6_nolocal_bitvector_reducemultiply.c
+        - only global variable
+        - __CPROVER_bitvector[4] for MEMORY_VALUE
+        - using multiplication expansion: 2 * (variable) = variable + variable
+        580343 variables, 2268906 clauses
+        SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+        Runtime decision procedure: 195.472s
+        real  4m54.496s
+        user  4m53.850s
+        sys 0m0.116s
+
+    safestack_mem_ver6_nolocal_reducemultiply.c
+        - only global variable
+        - using multiplication expansion: 2 * (variable) = variable + variable
+        1454593 variables, 5616462 clauses
+        > 972m
+
+
+
+# Questions to answer #
+
+array makes thing bad?
+index array should be bitvector?
+
+Why safestack is hard?
+data complexity
+- array created by malloc, struct in array
+concurrency complexity
+- too many interleavings --> (6x139x139x139)^4  --> 6.6x10^28
+- long path to error (at least 10 context switches, not mention main thread)
+
+
+
+
+
+# Some notes
+
+file regression/pointertranslation/swarmtest/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp___instance_15_s3.4bits.c line 556 function thread_0: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 53135 steps
+simple slicing removed 616 assignments
+Generated 24 VCC(s), 24 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+185714 variables, 685347 clauses
+SAT checker: negated claim is UNSATISFIABLE, i.e., holds
+Runtime decision procedure: 191.291s
+VERIFICATION SUCCESSFUL
+
+real    4m5.487s
+user    4m5.091s
+sys 0m0.083s
+
+file regression/pointertranslation/swarmtest/_cs_SafeStack_seqcst_forCSEQ_split_further_static.c._pp___instance_15_s3.3bits.c line 557 function thread_0: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 53135 steps
+simple slicing removed 616 assignments
+Generated 24 VCC(s), 24 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+160201 variables, 590718 clauses
+SAT checker: negated claim is UNSATISFIABLE, i.e., holds
+Runtime decision procedure: 110.854s
+VERIFICATION SUCCESSFUL
+
+real    2m44.492s
+user    2m44.190s
+sys 0m0.078s
+
+file regression/pointertranslation/SafeStack_seqcst_forCSEQ_split_further_static_Mem_ver6.c._pp_.swarm/_cs_SafeStack_seqcst_forCSEQ_split_further_static_Mem_ver6.c._pp___instance_15_s3.4bits.c line 558 function thread_0: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 51084 steps
+simple slicing removed 603 assignments
+Generated 24 VCC(s), 24 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+232617 variables, 871819 clauses
+SAT checker: negated claim is UNSATISFIABLE, i.e., holds
+Runtime decision procedure: 135.514s
+VERIFICATION SUCCESSFUL
+
+real    3m28.974s
+user    3m28.432s
+sys 0m0.135s
+
+file regression/pointertranslation/SafeStack_seqcst_forCSEQ_split_further_static_Mem_ver6.c._pp_.swarm/_cs_SafeStack_seqcst_forCSEQ_split_further_static_Mem_ver6.c._pp___instance_15_s3.3bits.c line 558 function thread_0: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 51084 steps
+simple slicing removed 603 assignments
+Generated 24 VCC(s), 24 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+197125 variables, 733447 clauses
+SAT checker: negated claim is UNSATISFIABLE, i.e., holds
+Runtime decision procedure: 84.085s
+VERIFICATION SUCCESSFUL
+
+real    2m27.222s
+user    2m26.925s
+sys 0m0.074s
+
+

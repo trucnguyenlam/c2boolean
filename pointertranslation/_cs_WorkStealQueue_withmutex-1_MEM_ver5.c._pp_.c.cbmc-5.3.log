@@ -1,0 +1,1724 @@
+CBMC version 5.3 64-bit x86_64 linux
+Parsing regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c
+file <command-line> line 0: <command-line>:0:0: warning: "__STDC_VERSION__" redefined
+file <command-line> line 0: <built-in>: note: this is the location of the previous definition
+Converting
+Type-checking _cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_
+file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 581 function main_thread: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+file <command-line> line 0: <command-line>:0:0: warning: "__STDC_VERSION__" redefined
+file <command-line> line 0: <built-in>: note: this is the location of the previous definition
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 20884 steps
+simple slicing removed 399 assignments
+Generated 36 VCC(s), 36 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+3801881 variables, 15501802 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 59.286s
+Building error trace
+
+Counterexample:
+
+State 419 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2164 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 423 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=1 (000000001)
+
+State 428 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2165 function main thread 0
+----------------------------------------------------
+  pc_cs=1 (0000000001)
+
+State 436 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 401 function main_thread thread 0
+----------------------------------------------------
+  size=4 (0000000000000000000000000000000000000000000000000000000000000100)
+
+State 437 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 126 function __cs_safe_malloc thread 0
+----------------------------------------------------
+  ptr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 453 file <builtin-library-malloc> line 25 function malloc thread 0
+----------------------------------------------------
+  ptr=&dynamic_object1 (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 460 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 401 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_handles=&dynamic_object1 (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 463 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 403 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_malloc_size=4 (00000000000000000000000000000100)
+
+State 464 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 153 function __CS_atomic_malloc thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_malloc_tmp=1 (00000000000000000000000000000001)
+
+State 465 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 154 function __CS_atomic_malloc thread 0
+----------------------------------------------------
+  num_malloc=5 (00000000000000000000000000000101)
+
+State 468 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 403 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_items=1 (00000000000000000000000000000001)
+
+State 469 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 406 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_ObjType_r=1 (00000000000000000000000000000001)
+
+State 470 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 407 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=0 (00000000000000000000000000000000)
+
+State 472 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 414 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_ObjType_r=2 (00000000000000000000000000000010)
+
+State 473 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 415 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=0 (00000000000000000000000000000000)
+
+State 475 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 422 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_ObjType_r=3 (00000000000000000000000000000011)
+
+State 476 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 423 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[3]=0 (00000000000000000000000000000000)
+
+State 478 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 430 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_ObjType_r=4 (00000000000000000000000000000100)
+
+State 479 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 431 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=0 (00000000000000000000000000000000)
+
+State 481 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 439 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_WorkStealQueue_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 482 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 441 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_WorkStealQueue_size=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 483 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 442 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.MaxSize=1048576 (0000000000000000000000000000000000000000000100000000000000000000)
+
+State 484 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 443 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.InitialSize=1024 (0000000000000000000000000000000000000000000000000000010000000000)
+
+State 487 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 444 function main_thread thread 0
+----------------------------------------------------
+  m=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 488 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 444 function main_thread thread 0
+----------------------------------------------------
+  val=0 (00000000000000000000000000000000)
+
+State 489 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 95 function __cs_mutex_init thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=-1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=0, .$pad1=0, .mask=0 } ({ 11111111111111111111111111111111, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000 })
+
+State 492 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 447 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 493 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 449 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 496 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 450 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 497 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 450 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 498 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 499 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=-1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=0, .$pad1=0, .mask=0 } ({ 11111111111111111111111111111111, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000 })
+
+State 503 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 455 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.mask=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 504 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 458 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 505 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 460 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 508 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 461 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 509 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 461 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 510 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 511 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=-1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=0, .$pad1=0, .mask=1 } ({ 11111111111111111111111111111111, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 517 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 466 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_malloc_size=2 (00000000000000000000000000000010)
+
+State 518 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 153 function __CS_atomic_malloc thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_malloc_tmp=5 (00000000000000000000000000000101)
+
+State 519 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 154 function __CS_atomic_malloc thread 0
+----------------------------------------------------
+  num_malloc=7 (00000000000000000000000000000111)
+
+State 522 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 466 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.elems=5 (00000000000000000000000000000101)
+
+State 526 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 471 function main_thread thread 0
+----------------------------------------------------
+  id=&dynamic_object1 (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 527 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 471 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 528 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 471 function main_thread thread 0
+----------------------------------------------------
+  t=Stealer_0 (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 529 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 471 function main_thread thread 0
+----------------------------------------------------
+  arg=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 530 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 471 function main_thread thread 0
+----------------------------------------------------
+  threadID=1 (00000000000000000000000000000001)
+
+State 532 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  dynamic_object1=1 (00000000000000000000000000000001)
+
+State 533 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[1]=1 (1)
+
+State 534 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[1]=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 834 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2168 function main thread 0
+----------------------------------------------------
+  pc[0]=1 (000000001)
+
+State 835 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2170 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 840 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=26 (000011010)
+
+State 845 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2172 function main thread 0
+----------------------------------------------------
+  pc_cs=26 (0000011010)
+
+State 849 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2174 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Stealer_param=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 851 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 211 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Stealer_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 852 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 213 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Stealer_r=-2147483648 (10000000000000000000000000000000)
+
+State 854 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 219 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Steal_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 856 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 221 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Steal_result=&__csLOCAL_Stealer_r (0000011100000000000000000000000000000000000000000000000000000000)
+
+State 859 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 223 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.cs=1 (00000000000000000000000000000001)
+
+State 861 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 228 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 862 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 230 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 866 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 231 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 867 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 231 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0011001000000000000000000000000000000000000000000000000000000000)
+
+State 868 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 231 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 870 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 188 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 874 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 232 function Stealer_0 thread 0
+----------------------------------------------------
+  __retval__readV_1=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 876 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 237 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Steal_h=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 878 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 240 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 879 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 242 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 883 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 243 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 884 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 243 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 885 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 886 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 891 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 252 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 892 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 254 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 896 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 255 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 897 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 255 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0011001100000000000000000000000000000000000000000000000000000000)
+
+State 898 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 255 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 900 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 188 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 904 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 256 function Stealer_0 thread 0
+----------------------------------------------------
+  __retval__readV_2=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 906 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 261 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Steal___if_cond_0=FALSE (00000000)
+
+State 910 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 271 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 911 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 273 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 915 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 274 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 916 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 274 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 917 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 918 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 922 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 279 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Steal_found=FALSE (00000000)
+
+State 926 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 282 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.cs=-1 (11111111111111111111111111111111)
+
+State 927 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 283 function Stealer_0 thread 0
+----------------------------------------------------
+  __retval__Steal_1=FALSE (00000000)
+
+State 929 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 288 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Stealer___if_cond_5=FALSE (00000000)
+
+State 933 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 307 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Steal_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 935 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 309 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Steal_result=&__csLOCAL_Stealer_r (0000011100000000000000000000000000000000000000000000000000000000)
+
+State 938 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 311 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.cs=1 (00000000000000000000000000000001)
+
+State 940 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 316 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 941 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 318 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 945 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 319 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 946 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 319 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0011010000000000000000000000000000000000000000000000000000000000)
+
+State 947 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 319 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 949 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 188 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 953 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 320 function Stealer_0 thread 0
+----------------------------------------------------
+  __retval__readV_3=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 955 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 325 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Steal_h=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 957 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 328 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 958 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 330 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 962 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 331 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 963 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 331 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 964 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 965 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 970 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 340 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 971 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 342 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 975 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 343 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 976 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 343 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0011010100000000000000000000000000000000000000000000000000000000)
+
+State 977 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 343 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 979 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 188 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 983 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 344 function Stealer_0 thread 0
+----------------------------------------------------
+  __retval__readV_4=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 985 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 349 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Steal___if_cond_0=FALSE (00000000)
+
+State 989 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 359 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 990 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 361 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 997 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2175 function main thread 0
+----------------------------------------------------
+  pc[1]=26 (000011010)
+
+State 998 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2179 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 1003 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=269 (100001101)
+
+State 1008 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2181 function main thread 0
+----------------------------------------------------
+  pc_cs=270 (0100001110)
+
+State 1014 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 475 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1015 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 477 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_elem=1 (00000000000000000000000000000001)
+
+State 1017 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 482 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1018 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 484 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1022 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 485 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1023 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 485 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1024 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 485 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1026 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 188 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1030 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 486 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_5=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1032 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 491 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Push_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1034 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 496 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1035 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 498 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1039 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 499 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1040 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 499 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1041 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 499 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1043 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1047 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 500 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_6=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1054 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 505 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Push___if_cond_4=TRUE (00000001)
+
+State 1057 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 508 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[(0 & (&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048576, .InitialSize=0, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 }).mask) + (long int)(&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048576, .InitialSize=0, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 }).elems]={ 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }[(0 & (&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048576, .InitialSize=0, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 }).mask) + (long int)(&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048576, .InitialSize=0, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 }).elems] (?)
+
+State 1059 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 511 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1060 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 513 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1064 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 514 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1065 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 514 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1066 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1067 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000001, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1075 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 689 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1076 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 691 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_elem=2 (00000000000000000000000000000010)
+
+State 1078 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 696 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1079 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 698 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1083 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 699 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1084 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 699 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0000111100000000000000000000000000000000000000000000000000000000)
+
+State 1085 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 699 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1087 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1091 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 700 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_10=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1093 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 705 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Push_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1095 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 710 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1096 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 712 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1100 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 713 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1101 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 713 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0001000000000000000000000000000000000000000000000000000000000000)
+
+State 1102 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 713 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1104 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1108 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 714 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_11=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1115 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 719 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Push___if_cond_4=TRUE (00000001)
+
+State 1118 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 722 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[(1 & (&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048577, .InitialSize=0, .head=0,
+    .tail=0, .elems=65541, .$pad1=0, .mask=1 }).mask) + (long int)(&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048577, .InitialSize=0, .head=0,
+    .tail=0, .elems=65541, .$pad1=0, .mask=1 }).elems]={ 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }[(1 & (&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048577, .InitialSize=0, .head=0,
+    .tail=0, .elems=65541, .$pad1=0, .mask=1 }).mask) + (long int)(&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048577, .InitialSize=0, .head=0,
+    .tail=0, .elems=65541, .$pad1=0, .mask=1 }).elems] (?)
+
+State 1120 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 725 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1121 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 727 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1125 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 728 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1126 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 728 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1127 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1128 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=2, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000010, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1135 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 902 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_r=2 (00000000000000000000000000000010)
+
+State 1137 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 907 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Pop_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1139 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 909 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Pop_result=&__csLOCAL_main_r (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 1141 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 914 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1142 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 916 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1146 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 917 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1147 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 917 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0001010000000000000000000000000000000000000000000000000000000000)
+
+State 1148 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 917 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1150 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1154 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 918 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_15=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1156 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 923 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1158 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 926 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1159 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 928 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1163 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 929 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1164 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 929 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1165 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1166 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000001, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1171 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 938 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1172 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 940 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1176 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 941 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1177 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 941 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0001010100000000000000000000000000000000000000000000000000000000)
+
+State 1178 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 941 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1180 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1184 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 942 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_16=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1186 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 947 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_3=TRUE (00000001)
+
+State 1189 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 950 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_r=2 (00000000000000000000000000000010)
+
+State 1190 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 951 function main_thread thread 0
+----------------------------------------------------
+  __retval__Pop_1=TRUE (00000001)
+
+State 1193 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1084 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main___if_cond_7=TRUE (00000001)
+
+State 1195 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1089 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Operation_r=2 (00000000000000000000000000000010)
+
+State 1197 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1090 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=1 (00000000000000000000000000000001)
+
+State 1201 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1101 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1202 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1103 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_elem=3 (00000000000000000000000000000011)
+
+State 1204 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1108 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1205 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1110 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1209 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1111 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1210 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1111 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0001100100000000000000000000000000000000000000000000000000000000)
+
+State 1211 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1111 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1213 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1217 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1112 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_20=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1219 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1117 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Push_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1221 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1122 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1222 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1124 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1226 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1125 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1227 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1125 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0001101000000000000000000000000000000000000000000000000000000000)
+
+State 1228 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1125 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1230 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1234 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1126 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_21=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1241 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1131 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Push___if_cond_4=TRUE (00000001)
+
+State 1244 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1134 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[(1 & (&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048577, .InitialSize=0, .head=0,
+    .tail=0, .elems=261, .$pad1=0, .mask=1 }).mask) + (long int)(&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048577, .InitialSize=0, .head=0,
+    .tail=0, .elems=261, .$pad1=0, .mask=1 }).elems]={ 0, 0, 1, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }[(1 & (&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048577, .InitialSize=0, .head=0,
+    .tail=0, .elems=261, .$pad1=0, .mask=1 }).mask) + (long int)(&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=1048577, .InitialSize=0, .head=0,
+    .tail=0, .elems=261, .$pad1=0, .mask=1 }).elems] (?)
+
+State 1246 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1137 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1247 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1139 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1251 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1140 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1252 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1140 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1253 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1254 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=2, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000010, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1262 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1315 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1263 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1317 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_elem=4 (00000000000000000000000000000100)
+
+State 1265 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1322 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1266 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1324 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1270 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1325 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1271 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1325 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0001111000000000000000000000000000000000000000000000000000000000)
+
+State 1272 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1325 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1274 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1278 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1326 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_25=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1280 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1331 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Push_t=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1282 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1336 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1283 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1338 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1287 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1339 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1288 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1339 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0001111100000000000000000000000000000000000000000000000000000000)
+
+State 1289 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1339 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1291 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1295 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1340 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_26=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1302 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1345 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Push___if_cond_4=TRUE (00000001)
+
+State 1305 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1348 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[(2 & (&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=2, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=-9223372036853727232, .InitialSize=0,
+    .head=0, .tail=0, .elems=5, .$pad1=0,
+    .mask=1 }).mask) + (long int)(&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=2, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=-9223372036853727232, .InitialSize=0,
+    .head=0, .tail=0, .elems=5, .$pad1=0,
+    .mask=1 }).elems]={ 0, 0, 1, 0, 0, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }[(2 & (&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=2, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=-9223372036853727232, .InitialSize=0,
+    .head=0, .tail=0, .elems=5, .$pad1=0,
+    .mask=1 }).mask) + (long int)(&__csLOCAL_main_q == &__csLOCAL_main_q.cs ? { .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=2, .elems=5, .$pad1=0, .mask=1 } : { .cs=0, .$pad0=0, .MaxSize=-9223372036853727232, .InitialSize=0,
+    .head=0, .tail=0, .elems=5, .$pad1=0,
+    .mask=1 }).elems] (?)
+
+State 1307 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1351 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1308 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1353 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 1312 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1354 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1313 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1354 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 1314 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1315 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=3, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000011, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1322 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1528 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_r=0 (00000000000000000000000000000000)
+
+State 1324 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1533 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Pop_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1326 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1535 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Pop_result=&__csLOCAL_main_r (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 1328 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1540 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1329 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1542 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1333 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1543 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1334 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1543 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0010001100000000000000000000000000000000000000000000000000000000)
+
+State 1335 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1543 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1337 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 1341 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1544 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_30=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 1343 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1549 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_t=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1345 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1552 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1346 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1554 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1350 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1555 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1351 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1555 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1352 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 1353 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=2, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000010, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1358 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1564 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1359 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1566 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1363 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1567 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1364 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1567 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0010010000000000000000000000000000000000000000000000000000000000)
+
+State 1365 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1567 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1367 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1371 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1568 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_31=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1373 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1573 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_3=TRUE (00000001)
+
+State 1376 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1576 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_r=4 (00000000000000000000000000000100)
+
+State 1377 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1577 function main_thread thread 0
+----------------------------------------------------
+  __retval__Pop_2=TRUE (00000001)
+
+State 1380 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1710 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main___if_cond_8=TRUE (00000001)
+
+State 1382 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1715 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Operation_r=4 (00000000000000000000000000000100)
+
+State 1384 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1716 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=1 (00000000000000000000000000000001)
+
+State 1387 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1726 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_r=0 (00000000000000000000000000000000)
+
+State 1389 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1731 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Pop_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1391 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1733 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Pop_result=&__csLOCAL_main_r (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 1393 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1738 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1394 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1740 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1398 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1741 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1399 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1741 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0010100000000000000000000000000000000000000000000000000000000000)
+
+State 1400 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1741 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1402 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1406 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1742 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_35=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1408 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1747 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1410 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1750 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1411 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1752 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1415 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1753 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1416 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1753 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1417 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1418 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000001, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1423 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1762 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1424 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1764 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1428 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1765 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1429 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1765 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0010100100000000000000000000000000000000000000000000000000000000)
+
+State 1430 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1765 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1432 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1436 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1766 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_36=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1438 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1771 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_3=TRUE (00000001)
+
+State 1441 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1774 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_r=3 (00000000000000000000000000000011)
+
+State 1442 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1775 function main_thread thread 0
+----------------------------------------------------
+  __retval__Pop_3=TRUE (00000001)
+
+State 1445 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1908 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main___if_cond_9=TRUE (00000001)
+
+State 1447 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1913 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Operation_r=3 (00000000000000000000000000000011)
+
+State 1449 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1914 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[3]=1 (00000000000000000000000000000001)
+
+State 1452 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1924 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_r=0 (00000000000000000000000000000000)
+
+State 1454 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1929 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Pop_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1456 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1931 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Pop_result=&__csLOCAL_main_r (0000011000000000000000000000000000000000000000000000000000000000)
+
+State 1458 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1936 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1459 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1938 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1463 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1939 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1464 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1939 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0010110100000000000000000000000000000000000000000000000000000000)
+
+State 1465 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1939 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1467 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1471 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1940 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_40=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1473 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1945 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1475 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1948 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1476 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1950 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1480 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1951 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1481 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1951 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1482 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1483 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1488 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1960 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1489 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1962 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1493 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1963 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1494 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1963 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0010111000000000000000000000000000000000000000000000000000000000)
+
+State 1495 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1963 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1497 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1501 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1964 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_41=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1503 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1969 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_3=FALSE (00000000)
+
+State 1507 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1980 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1508 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1982 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1512 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1983 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1513 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1983 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1514 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1515 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=1,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000001, 0000000000000000000000000000000000000000000000000000000000000001, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1520 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1991 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_SyncPop_q=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1549 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2184 function main thread 0
+----------------------------------------------------
+  pc[0]=270 (100001110)
+
+State 1550 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2187 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 1555 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (000000011)
+
+State 1560 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2189 function main thread 0
+----------------------------------------------------
+  pc_cs=29 (0000011101)
+
+State 1564 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2191 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Stealer_param=&__csLOCAL_main_q.cs (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1594 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 362 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1595 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 362 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1596 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1597 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=1, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=1, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1601 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 367 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Steal_found=FALSE (00000000)
+
+State 1605 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 370 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.cs=-1 (11111111111111111111111111111111)
+
+State 1606 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 371 function Stealer_0 thread 0
+----------------------------------------------------
+  __retval__Steal_2=FALSE (00000000)
+
+State 1608 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 376 function Stealer_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Stealer___if_cond_6=FALSE (00000000)
+
+State 1615 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2192 function main thread 0
+----------------------------------------------------
+  pc[1]=29 (000011101)
+
+State 1616 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2195 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 1621 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=23 (000010111)
+
+State 1626 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2197 function main thread 0
+----------------------------------------------------
+  pc_cs=293 (0100100101)
+
+State 1901 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1993 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_SyncPop_result=&__csLOCAL_main_r (0000011000000000000000000000000000000000000000000000000000000000)
+
+State 1904 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 1995 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.cs=0 (00000000000000000000000000000000)
+
+State 1906 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2000 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1907 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2002 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1911 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2003 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1912 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2003 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0010111100000000000000000000000000000000000000000000000000000000)
+
+State 1913 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2003 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1915 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 193 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1919 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2004 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_42=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1921 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2009 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_SyncPop_t=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1923 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2012 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_v=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1924 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2014 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_writeV_w=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1928 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2015 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=&__csLOCAL_main_q.tail (0000001000000000000000000000000000000000000000000000000000100000)
+
+State 1929 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2015 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1930 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1931 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 180 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=0, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000000, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1936 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2024 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1937 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2026 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1941 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2027 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1942 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2027 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0011000000000000000000000000000000000000000000000000000000000000)
+
+State 1943 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2027 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1945 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 188 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=0, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000000, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1949 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2028 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_43=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1951 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2033 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_SyncPop___if_cond_1=TRUE (00000001)
+
+State 1954 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2036 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_r=4 (00000000000000000000000000000100)
+
+State 1955 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2037 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_SyncPop_found=TRUE (00000001)
+
+State 1959 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2058 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_readV_v=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1960 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2060 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_readV_expected=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1964 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2061 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_obj=&__csLOCAL_main_q.head (0000001000000000000000000000000000000000000000000000000000011000)
+
+State 1965 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2061 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_expected=&__csLOCAL_readV_expected (0011000100000000000000000000000000000000000000000000000000000000)
+
+State 1966 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2061 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_exchange_strong_desired=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1968 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 188 function __CS_atomic_compare_exchange_strong thread 0
+----------------------------------------------------
+  __csLOCAL_main_q={ .cs=0, .$pad0=0, .MaxSize=1048576, .InitialSize=1024, .head=0,
+    .tail=0, .elems=5, .$pad1=0, .mask=1 } ({ 00000000000000000000000000000000, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000100000000000000000000, 0000000000000000000000000000000000000000000000000000010000000000, 0000000000000000000000000000000000000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000000, 00000000000000000000000000000101, 00000000000000000000000000000000, 0000000000000000000000000000000000000000000000000000000000000001 })
+
+State 1972 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2062 function main_thread thread 0
+----------------------------------------------------
+  __retval__readV_44=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1974 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2067 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_SyncPop___if_cond_2=FALSE (00000000)
+
+State 1979 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2093 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_q.cs=-1 (11111111111111111111111111111111)
+
+State 1980 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2094 function main_thread thread 0
+----------------------------------------------------
+  __retval__SyncPop_4=TRUE (00000001)
+
+State 1982 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2099 function main_thread thread 0
+----------------------------------------------------
+  __retval__Pop_4=TRUE (00000001)
+
+State 1985 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2106 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main___if_cond_10=TRUE (00000001)
+
+State 1987 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2111 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Operation_r=4 (00000000000000000000000000000100)
+
+State 1989 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2112 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=2 (00000000000000000000000000000010)
+
+State 1995 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2120 function main_thread thread 0
+----------------------------------------------------
+  id=1 (00000000000000000000000000000001)
+
+State 1996 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2120 function main_thread thread 0
+----------------------------------------------------
+  value_ptr=((void **)NULL) (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 2000 file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2123 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Check_r=1 (00000000000000000000000000000001)
+
+Violated property:
+  file regression/pointertranslation/_cs_WorkStealQueue_withmutex-1_MEM_ver5.c._pp_.c line 2124 function main_thread
+  assertion MEMORY_VALUE[(signed long int)__csLOCALPARAM_Check_r] == 1
+  MEMORY_VALUE[(signed long int)__csLOCALPARAM_Check_r] == 1
+
+VERIFICATION FAILED
+
+real  1m6.045s
+user  1m5.178s
+sys 0m0.443s

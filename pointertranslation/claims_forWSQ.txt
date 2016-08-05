@@ -1,0 +1,18 @@
+1. Array of structure is badly handled in CBMC
+    a. Original WSQ (with obj)
+    b. Original with int replacing obj
+
+2. Pushing out things from structure help CBMC
+    a. Create a version with the global queue in global scope
+    b. From that version, starting pushing things out
+
+3. Malloc is worse than static allocation
+    -- It is hard to try in this example
+
+4. Reducing number of bits help CBMC
+    -- ALL the four versions above with bit reducing
+5. Memory model is not good as normal memory model of CBMC for general type
+    -- version mentioned in 2.a.
+    -- Manual translation of memory model for version mentioned in 2.a.
+6. When reducing number of bits, memory model works better than normal CBMC model
+    -- Two versions above with reducing number of bits.

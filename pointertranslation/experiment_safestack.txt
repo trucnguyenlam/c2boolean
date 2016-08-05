@@ -1,0 +1,51 @@
+All experiments should be carried using cbmc-5.3 and using two options
+ --arrays-uf-never            never turn arrays into uninterpreted functions
+ --arrays-uf-always           always turn arrays into uninterpreted functions
+
+1. Original (with size of malloc known)
+    - no array option
+3906293 variables, 16003773 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 8597.02s
+real    145m9.500s
+user    144m59.091s
+sys 0m0.793s
+2. Original with pointer malloc assigned to static array
+    - no array option
+2189235 variables, 9046328 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 2683.33s
+real    46m26.923s
+user    46m23.047s
+sys 0m0.348s
+    --arrays-uf-never
+2189235 variables, 9046328 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 2449.54s
+real    42m30.735s
+user    42m27.112s
+sys 0m0.288s
+    --arrays-uf-always
+flatten_byte_update can only do arrays of scalars right now
+
+3. Original with static array
+1433801 variables, 5811697 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 11098.4s
+real    186m42.357s
+user    186m31.036s
+sys 0m0.762s
+
+3. Mem_ver6 (all variables are indexed)
+
+
+
+
+
+<!-- 4. Mem_ver5 (only pointer variables (with malloc) are indexed)
+    a. With all guessed variable
+    b. With one guessed variable
+    c. Without guessed
+ -->
+
+

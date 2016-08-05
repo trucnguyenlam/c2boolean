@@ -1,0 +1,119 @@
+2015-11-02 19:37:01,280 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver1.c --unwind 4 --no-unwinding-assertions
+2015-11-02 19:37:01,280 - INFO - Writing output to mem_ver1_unwind4.log
+2015-11-02 19:37:50,510 - WARNING - System has swapped during benchmarking. Benchmark results are unreliable!
+exitcode=2560
+returnvalue=10
+walltime=49.127466917037964s
+cputime=49.009973584s
+cputime-cpu0=3.522719235s
+cputime-cpu2=9.392445775s
+cputime-cpu3=0.000050879s
+cputime-cpu4=21.504904320s
+cputime-cpu5=0.000689038s
+cputime-cpu6=14.589126671s
+cputime-cpu7=0.000037666s
+memory=2483662848
+2015-11-02 19:37:50,619 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver1.c --unwind 5 --no-unwinding-assertions
+2015-11-02 19:37:50,619 - INFO - Writing output to mem_ver1_unwind5.log
+2015-11-02 19:39:33,577 - WARNING - System has swapped during benchmarking. Benchmark results are unreliable!
+exitcode=2560
+returnvalue=10
+walltime=102.85422015190125s
+cputime=102.730194883s
+cputime-cpu0=102.720204200s
+cputime-cpu1=0.000453194s
+cputime-cpu3=0.001959205s
+cputime-cpu4=0.000083818s
+cputime-cpu5=0.005628014s
+cputime-cpu6=0.000759236s
+cputime-cpu7=0.001107216s
+memory=4659855360
+2015-11-02 19:39:33,671 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver1.c --unwind 6 --no-unwinding-assertions
+2015-11-02 19:39:33,671 - INFO - Writing output to mem_ver1_unwind6.log
+2015-11-02 19:43:42,860 - WARNING - System has swapped during benchmarking. Benchmark results are unreliable!
+exitcode=2560
+returnvalue=10
+walltime=249.08500027656555s
+cputime=248.79774427s
+cputime-cpu0=0.094690152s
+cputime-cpu2=2.764307474s
+cputime-cpu3=0.005498708s
+cputime-cpu4=244.312194650s
+cputime-cpu5=0.002562555s
+cputime-cpu6=1.618490731s
+memory=7808413696
+2015-11-02 19:43:42,955 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver1.c --unwind 7 --no-unwinding-assertions
+2015-11-02 19:43:42,955 - INFO - Writing output to mem_ver1_unwind7.log
+2015-11-02 19:59:51,346 - WARNING - System has swapped during benchmarking. Benchmark results are unreliable!
+exitcode=2560
+returnvalue=10
+walltime=968.2873251438141s
+cputime=967.116845287s
+cputime-cpu0=92.637566849s
+cputime-cpu2=7.152089565s
+cputime-cpu3=17.663704626s
+cputime-cpu4=6.993856030s
+cputime-cpu5=0.001862812s
+cputime-cpu6=2.858485674s
+cputime-cpu7=839.809279731s
+memory=12170125312
+2015-11-02 19:59:51,451 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver1.c --unwind 8 --no-unwinding-assertions
+2015-11-02 19:59:51,451 - INFO - Writing output to mem_ver1_unwind8.log
+2015-11-03 10:57:39,654 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver2.c --unwind 4 --no-unwinding-assertions
+2015-11-03 10:57:39,654 - INFO - Writing output to mem_ver2_unwind4.log
+exitcode=2560
+returnvalue=10
+walltime=57.77432632446289s
+cputime=57.059956294s
+cputime-cpu0=7.806847538s
+cputime-cpu1=26.857311915s
+cputime-cpu2=0.010343684s
+cputime-cpu4=22.385282233s
+cputime-cpu5=0.000053842s
+cputime-cpu7=0.000117082s
+memory=3053821952
+2015-11-03 10:58:37,790 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver2.c --unwind 5 --no-unwinding-assertions
+2015-11-03 10:58:37,791 - INFO - Writing output to mem_ver2_unwind5.log
+exitcode=2560
+returnvalue=10
+walltime=115.94062161445618s
+cputime=115.783861817s
+cputime-cpu0=7.353746561s
+cputime-cpu1=39.285619177s
+cputime-cpu3=0.000462245s
+cputime-cpu4=4.505071570s
+cputime-cpu5=31.259645796s
+cputime-cpu6=0.000084655s
+cputime-cpu7=33.379231813s
+memory=5687517184
+2015-11-03 11:00:33,928 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver2.c --unwind 6 --no-unwinding-assertions
+2015-11-03 11:00:33,928 - INFO - Writing output to mem_ver2_unwind6.log
+exitcode=2560
+returnvalue=10
+walltime=465.8073661327362s
+cputime=465.209220433s
+cputime-cpu0=155.360450530s
+cputime-cpu1=34.866392512s
+cputime-cpu2=8.095722874s
+cputime-cpu3=0.007936774s
+cputime-cpu4=95.315702800s
+cputime-cpu5=76.305213360s
+cputime-cpu6=95.257014328s
+cputime-cpu7=0.000787255s
+memory=9658064896
+2015-11-03 11:08:19,932 - INFO - Starting command cbmc-5.2 merge_sort_false-unreach-call_Mem_ver2.c --unwind 7 --no-unwinding-assertions
+2015-11-03 11:08:19,932 - INFO - Writing output to mem_ver2_unwind7.log
+2015-11-03 11:28:58,369 - WARNING - System has swapped during benchmarking. Benchmark results are unreliable!
+exitcode=2560
+returnvalue=10
+walltime=1237.701289653778s
+cputime=1233.183762701s
+cputime-cpu0=337.190310766s
+cputime-cpu1=0.850003246s
+cputime-cpu2=95.449993873s
+cputime-cpu3=248.055798477s
+cputime-cpu4=263.975866474s
+cputime-cpu5=5.139930503s
+cputime-cpu6=252.035893521s
+cputime-cpu7=30.485965841s
+memory=15070875648

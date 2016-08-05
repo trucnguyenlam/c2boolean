@@ -1,0 +1,1584 @@
+CBMC version 5.3 64-bit x86_64 linux
+Parsing regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c
+file <command-line> line 0: <command-line>:0:0: warning: "__STDC_VERSION__" redefined
+file <command-line> line 0: <built-in>: note: this is the location of the previous definition
+Converting
+Type-checking _cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_
+file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 557 function thread_0: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+file <command-line> line 0: <command-line>:0:0: warning: "__STDC_VERSION__" redefined
+file <command-line> line 0: <built-in>: note: this is the location of the previous definition
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 66698 steps
+simple slicing removed 772 assignments
+Generated 24 VCC(s), 24 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+542648 variables, 2091835 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 1986.71s
+Building error trace
+
+Counterexample:
+
+State 327 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2778 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 331 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 336 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2779 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 341 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2664 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_pushCount=3 (00000011)
+
+State 345 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2666 function main_thread thread 0
+----------------------------------------------------
+  size=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 346 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 126 function __cs_safe_malloc thread 0
+----------------------------------------------------
+  ptr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 362 file <builtin-library-malloc> line 25 function malloc thread 0
+----------------------------------------------------
+  ptr=dynamic_object1 (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 369 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2666 function main_thread thread 0
+----------------------------------------------------
+  array_Value=dynamic_object1 (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 373 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2667 function main_thread thread 0
+----------------------------------------------------
+  size=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 374 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 126 function __cs_safe_malloc thread 0
+----------------------------------------------------
+  ptr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 390 file <builtin-library-malloc> line 25 function malloc thread 0
+----------------------------------------------------
+  ptr=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 397 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2667 function main_thread thread 0
+----------------------------------------------------
+  array_Next=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 400 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2668 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 401 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2668 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=3 (00000011)
+
+State 402 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  count=3 (00000011)
+
+State 406 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2669 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 407 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2669 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=0 (00000000)
+
+State 408 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  head=0 (00000000)
+
+State 410 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2670 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=0 (00000000)
+
+State 414 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2677 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 415 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2677 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (00000001)
+
+State 416 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[0]=1 (00000001)
+
+State 418 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2679 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=1 (00000001)
+
+State 422 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2686 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 + 1 (0000001000000000000000000000000000000000000000000000000000000001)
+
+State 423 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2686 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (00000010)
+
+State 424 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[1]=2 (00000010)
+
+State 426 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2688 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=2 (00000010)
+
+State 431 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2701 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 + 2 (0000001000000000000000000000000000000000000000000000000000000010)
+
+State 432 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2701 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=-1 (11111111)
+
+State 433 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[2]=-1 (11111111)
+
+State 436 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2706 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=0 (00000000)
+
+State 440 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2713 function main_thread thread 0
+----------------------------------------------------
+  id=threads (0000110000000000000000000000000000000000000000000000000000000000)
+
+State 441 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2713 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 442 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2713 function main_thread thread 0
+----------------------------------------------------
+  t=thread_0 (0000110100000000000000000000000000000000000000000000000000000000)
+
+State 443 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2713 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 444 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2713 function main_thread thread 0
+----------------------------------------------------
+  threadID=1 (00000000000000000000000000000001)
+
+State 446 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[0]=1 (00000000000000000000000000000001)
+
+State 447 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[1]=1 (1)
+
+State 448 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[1]=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 451 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2715 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=1 (00000001)
+
+State 456 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2722 function main_thread thread 0
+----------------------------------------------------
+  id=threads + 1 (0000110000000000000000000000000000000000000000000000000000000100)
+
+State 457 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2722 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 458 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2722 function main_thread thread 0
+----------------------------------------------------
+  t=thread_1 (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 459 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2722 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 460 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2722 function main_thread thread 0
+----------------------------------------------------
+  threadID=2 (00000000000000000000000000000010)
+
+State 462 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[1]=2 (00000000000000000000000000000010)
+
+State 463 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[2]=1 (1)
+
+State 464 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[2]=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 467 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2724 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=2 (00000010)
+
+State 472 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2731 function main_thread thread 0
+----------------------------------------------------
+  id=threads + 2 (0000110000000000000000000000000000000000000000000000000000001000)
+
+State 473 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2731 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 474 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2731 function main_thread thread 0
+----------------------------------------------------
+  t=thread_2 (0000111100000000000000000000000000000000000000000000000000000000)
+
+State 475 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2731 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 476 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2731 function main_thread thread 0
+----------------------------------------------------
+  threadID=3 (00000000000000000000000000000011)
+
+State 478 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[2]=3 (00000000000000000000000000000011)
+
+State 479 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[3]=1 (1)
+
+State 480 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[3]=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 483 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2733 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=3 (00000011)
+
+State 486 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2737 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=0 (00000000)
+
+State 494 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2782 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 495 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2784 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 500 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 505 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2786 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 509 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2788 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 511 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 210 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=0 (00000000)
+
+State 512 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 211 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 517 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 218 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 521 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 218 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 526 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 226 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 529 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 226 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000)
+
+State 669 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2789 function main thread 0
+----------------------------------------------------
+  pc[1]=3 (00000011)
+
+State 670 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2792 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 675 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 680 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2794 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 684 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2796 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 686 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1029 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=1 (00000001)
+
+State 687 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1030 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 692 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1037 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 696 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1037 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 701 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1045 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 704 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1045 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000)
+
+State 844 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2797 function main thread 0
+----------------------------------------------------
+  pc[2]=3 (00000011)
+
+State 845 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2800 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 850 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=62 (00111110)
+
+State 855 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2802 function main thread 0
+----------------------------------------------------
+  pc_cs=62 (000111110)
+
+State 859 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2804 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 861 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1846 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=2 (00000010)
+
+State 862 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1847 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 867 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1854 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 871 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1854 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 876 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1862 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 879 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1862 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000)
+
+State 883 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1864 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 884 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1864 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111)
+
+State 885 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000001)
+
+State 886 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ -1, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 889 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1864 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000001)
+
+State 891 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1868 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000)
+
+State 895 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1870 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 896 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1870 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0011100000000000000000000000000000000000000000000000000000000000)
+
+State 897 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1870 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000001)
+
+State 899 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000001)
+
+State 903 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1870 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 908 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1873 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 909 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1873 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000001)
+
+State 910 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=3 (00000011)
+
+State 911 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=2 (00000010)
+
+State 914 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1874 function thread_2 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000)
+
+State 917 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1956 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000)
+
+State 921 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2192 function thread_2 thread 0
+----------------------------------------------------
+  dynamic_object1[POINTER_OFFSET(dynamic_object1)]={ 2, 3, 1 }[POINTER_OFFSET(dynamic_object1)] (?)
+
+State 924 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2196 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000)
+
+State 928 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2198 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 931 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2198 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000001)
+
+State 932 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2201 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000)
+
+State 936 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2203 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 937 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2203 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (00000001)
+
+State 938 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ 1, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 940 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2205 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000001)
+
+State 1022 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2805 function main thread 0
+----------------------------------------------------
+  pc[3]=62 (00111110)
+
+State 1023 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2809 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 1028 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 1033 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2811 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 1046 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2814 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 1047 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2817 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 1052 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 1057 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2819 function main thread 0
+----------------------------------------------------
+  pc_cs=6 (000000110)
+
+State 1061 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2821 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1068 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 228 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1069 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 228 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111)
+
+State 1070 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000001)
+
+State 1071 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ -1, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 1074 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 228 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000001)
+
+State 1076 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 232 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000)
+
+State 1080 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 234 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1081 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 234 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0001000000000000000000000000000000000000000000000000000000000000)
+
+State 1082 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 234 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000001)
+
+State 1084 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 180 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000001)
+
+State 1088 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 234 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=FALSE (00000000)
+
+State 1227 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2822 function main thread 0
+----------------------------------------------------
+  pc[1]=6 (00000110)
+
+State 1228 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2825 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 1233 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=59 (00111011)
+
+State 1238 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2827 function main thread 0
+----------------------------------------------------
+  pc_cs=62 (000111110)
+
+State 1242 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2829 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1249 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1047 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1250 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1047 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111)
+
+State 1251 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=-1 (11111111)
+
+State 1252 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ -1, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 1255 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1047 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=-1 (11111111)
+
+State 1262 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1067 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1266 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1067 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1271 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1076 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1274 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1076 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000001)
+
+State 1278 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1078 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 + 1 (0000001000000000000000000000000000000000000000000000000000000001)
+
+State 1279 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1078 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111)
+
+State 1280 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (00000010)
+
+State 1281 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2 + 1)]={ -1, -1, -1 }[POINTER_OFFSET(dynamic_object2 + 1)] (?)
+
+State 1284 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1078 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=2 (00000010)
+
+State 1286 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1082 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000001)
+
+State 1290 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1084 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1291 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1084 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0010010100000000000000000000000000000000000000000000000000000000)
+
+State 1292 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1084 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=2 (00000010)
+
+State 1294 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=2 (00000010)
+
+State 1298 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1084 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 1303 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1087 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1304 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1087 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000001)
+
+State 1305 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000010)
+
+State 1306 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=1 (00000001)
+
+State 1309 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1088 function thread_1 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000001)
+
+State 1312 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1139 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000001)
+
+State 1316 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1375 function thread_1 thread 0
+----------------------------------------------------
+  dynamic_object1[1 + POINTER_OFFSET(dynamic_object1)]={ 2, 1, 1 }[1 + POINTER_OFFSET(dynamic_object1)] (?)
+
+State 1319 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1379 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=1 (00000001)
+
+State 1323 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1381 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1326 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1381 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=2 (00000010)
+
+State 1327 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1384 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000)
+
+State 1331 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1386 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 + 1 (0000001000000000000000000000000000000000000000000000000000000001)
+
+State 1332 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1386 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (00000010)
+
+State 1333 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2 + 1)]={ -1, 2, -1 }[POINTER_OFFSET(dynamic_object2 + 1)] (?)
+
+State 1335 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1388 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000001)
+
+State 1418 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2830 function main thread 0
+----------------------------------------------------
+  pc[2]=62 (00111110)
+
+State 1419 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2833 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 1424 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=8 (00001000)
+
+State 1429 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2835 function main thread 0
+----------------------------------------------------
+  pc_cs=70 (001000110)
+
+State 1433 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2837 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1500 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2210 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1501 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2210 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0100000100000000000000000000000000000000000000000000000000000000)
+
+State 1502 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2210 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000)
+
+State 1504 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 180 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=2 (00000010)
+
+State 1509 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2210 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=TRUE (00000001)
+
+State 1514 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2217 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1515 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2217 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (00000010)
+
+State 1516 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ 2, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 1522 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2218 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1523 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2218 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0100000100000000000000000000000000000000000000000000000000000000)
+
+State 1524 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2218 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000)
+
+State 1526 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=0 (00000000)
+
+State 1531 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2218 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 1537 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2241 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1538 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2241 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000001)
+
+State 1539 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 189 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (00000001)
+
+State 1540 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 190 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  count=2 (00000010)
+
+State 1544 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2247 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1617 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2838 function main thread 0
+----------------------------------------------------
+  pc[3]=70 (01000110)
+
+State 1618 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2842 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 1623 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 1628 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2844 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 1641 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2847 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 1642 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2850 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 1647 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=68 (01000100)
+
+State 1652 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2852 function main thread 0
+----------------------------------------------------
+  pc_cs=74 (001001010)
+
+State 1656 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2854 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1666 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 243 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1667 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 243 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=1 (00000001)
+
+State 1668 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (00000010)
+
+State 1669 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ 1, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 1678 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 248 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1682 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 248 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1687 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 257 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1690 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 257 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000)
+
+State 1694 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 259 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1695 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 259 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111)
+
+State 1696 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000001)
+
+State 1697 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ -1, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 1700 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 259 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000001)
+
+State 1702 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 263 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000)
+
+State 1706 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 265 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1707 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 265 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0001000100000000000000000000000000000000000000000000000000000000)
+
+State 1708 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 265 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000001)
+
+State 1710 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000001)
+
+State 1714 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 265 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 1719 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 268 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1720 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 268 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000001)
+
+State 1721 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000010)
+
+State 1722 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=1 (00000001)
+
+State 1725 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 269 function thread_0 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000)
+
+State 1728 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 320 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000)
+
+State 1732 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 556 function thread_0 thread 0
+----------------------------------------------------
+  dynamic_object1[POINTER_OFFSET(dynamic_object1)]={ 0, 1, 1 }[POINTER_OFFSET(dynamic_object1)] (?)
+
+State 1735 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 560 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000)
+
+State 1739 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 562 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1742 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 562 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000001)
+
+State 1743 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 565 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000)
+
+State 1747 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 567 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1748 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 567 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (00000001)
+
+State 1749 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ 1, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 1751 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 569 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000001)
+
+State 1758 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 575 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1759 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 575 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0001100100000000000000000000000000000000000000000000000000000000)
+
+State 1760 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 575 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000)
+
+State 1762 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=0 (00000000)
+
+State 1767 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 574 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 1773 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 607 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1774 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 607 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000001)
+
+State 1775 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 189 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (00000001)
+
+State 1776 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 190 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  count=2 (00000010)
+
+State 1780 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 613 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1785 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 620 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 1789 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 620 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1794 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 628 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1797 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 628 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000)
+
+State 1801 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 630 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 1802 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 630 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111)
+
+State 1803 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (00000001)
+
+State 1804 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ -1, 2, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 1807 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 630 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000001)
+
+State 1809 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 634 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000)
+
+State 1813 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 636 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 1814 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 636 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0001101000000000000000000000000000000000000000000000000000000000)
+
+State 1815 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 636 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000001)
+
+State 1817 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000001)
+
+State 1821 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 636 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 1891 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2855 function main thread 0
+----------------------------------------------------
+  pc[1]=74 (01001010)
+
+State 1892 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2858 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 1897 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 1902 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2860 function main thread 0
+----------------------------------------------------
+  pc_cs=62 (000111110)
+
+State 1906 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2862 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2049 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2863 function main thread 0
+----------------------------------------------------
+  pc[2]=62 (00111110)
+
+State 2050 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2866 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 2055 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=58 (00111010)
+
+State 2060 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2868 function main thread 0
+----------------------------------------------------
+  pc_cs=128 (010000000)
+
+State 2064 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2870 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 2139 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2254 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 2143 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2254 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 2148 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2262 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 2151 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2262 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000001)
+
+State 2155 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2264 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 + 1 (0000001000000000000000000000000000000000000000000000000000000001)
+
+State 2156 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2264 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111)
+
+State 2157 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (00000010)
+
+State 2158 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2 + 1)]={ -1, -1, -1 }[POINTER_OFFSET(dynamic_object2 + 1)] (?)
+
+State 2161 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2264 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=2 (00000010)
+
+State 2163 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2268 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000001)
+
+State 2167 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2270 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 2168 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2270 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0100001000000000000000000000000000000000000000000000000000000000)
+
+State 2169 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2270 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=2 (00000010)
+
+State 2171 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=2 (00000010)
+
+State 2175 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2270 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 2180 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2273 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 2181 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2273 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000001)
+
+State 2182 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000010)
+
+State 2183 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=1 (00000001)
+
+State 2186 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2274 function thread_2 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000001)
+
+State 2189 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2356 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000001)
+
+State 2193 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2592 function thread_2 thread 0
+----------------------------------------------------
+  dynamic_object1[1 + POINTER_OFFSET(dynamic_object1)]={ 0, 2, 1 }[1 + POINTER_OFFSET(dynamic_object1)] (?)
+
+State 2208 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2871 function main thread 0
+----------------------------------------------------
+  pc[3]=128 (10000000)
+
+State 2209 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2875 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 2214 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 2219 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2877 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 2232 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2880 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 2233 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2883 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 2238 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=65 (01000001)
+
+State 2243 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2885 function main thread 0
+----------------------------------------------------
+  pc_cs=139 (010001011)
+
+State 2247 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2887 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 2325 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 639 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 2326 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 639 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000001)
+
+State 2327 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=1 (00000001)
+
+State 2328 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=0 (00000000)
+
+State 2331 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 640 function thread_0 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000)
+
+State 2334 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 722 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000)
+
+State 2338 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 958 function thread_0 thread 0
+----------------------------------------------------
+  dynamic_object1[POINTER_OFFSET(dynamic_object1)]={ 0, 2, 1 }[POINTER_OFFSET(dynamic_object1)] (?)
+
+State 2341 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 962 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000)
+
+State 2345 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 964 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 2348 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 964 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=2 (00000010)
+
+State 2349 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 967 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000)
+
+State 2353 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 969 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 2354 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 969 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (00000010)
+
+State 2355 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2)]={ 2, -1, -1 }[POINTER_OFFSET(dynamic_object2)] (?)
+
+State 2357 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 971 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000001)
+
+State 2364 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 976 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 2365 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 976 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010001100000000000000000000000000000000000000000000000000000000)
+
+State 2366 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 976 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000)
+
+State 2368 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=0 (00000000)
+
+State 2373 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 976 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 2379 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1007 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 2380 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1007 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000001)
+
+State 2381 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 189 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=0 (00000000)
+
+State 2382 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 190 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  count=1 (00000001)
+
+State 2386 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1013 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 2393 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2888 function main thread 0
+----------------------------------------------------
+  pc[1]=139 (10001011)
+
+State 2394 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2891 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 2399 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=67 (01000011)
+
+State 2404 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2893 function main thread 0
+----------------------------------------------------
+  pc_cs=129 (010000001)
+
+State 2408 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2895 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2475 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1393 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 2476 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1393 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010110100000000000000000000000000000000000000000000000000000000)
+
+State 2477 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1393 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000001)
+
+State 2479 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 180 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=0 (00000000)
+
+State 2484 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1393 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=TRUE (00000001)
+
+State 2489 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1400 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=dynamic_object2 + 1 (0000001000000000000000000000000000000000000000000000000000000001)
+
+State 2490 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1400 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=0 (00000000)
+
+State 2491 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 155 function __CS_atomic_store thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2 + 1)]={ 2, 0, -1 }[POINTER_OFFSET(dynamic_object2 + 1)] (?)
+
+State 2497 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1401 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 2498 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1401 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010110100000000000000000000000000000000000000000000000000000000)
+
+State 2499 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1401 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000001)
+
+State 2501 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=1 (00000001)
+
+State 2506 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1401 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 2512 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1424 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 2513 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1424 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000001)
+
+State 2514 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 189 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (00000001)
+
+State 2515 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 190 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  count=2 (00000010)
+
+State 2519 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1430 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2524 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1437 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 2528 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1437 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 2533 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1445 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 2536 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1445 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000001)
+
+State 2540 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1447 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=dynamic_object2 + 1 (0000001000000000000000000000000000000000000000000000000000000001)
+
+State 2541 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1447 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (11111111)
+
+State 2542 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 166 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (00000000)
+
+State 2543 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 167 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  dynamic_object2[POINTER_OFFSET(dynamic_object2 + 1)]={ 2, -1, -1 }[POINTER_OFFSET(dynamic_object2 + 1)] (?)
+
+State 2546 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1447 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=0 (00000000)
+
+State 2548 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1451 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000001)
+
+State 2552 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1453 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&head (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 2553 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1453 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0010111000000000000000000000000000000000000000000000000000000000)
+
+State 2554 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1453 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000)
+
+State 2556 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 175 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  head=0 (00000000)
+
+State 2560 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1453 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 2565 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1456 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&count (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 2566 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1456 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000001)
+
+State 2567 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 197 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000010)
+
+State 2568 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 198 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  count=1 (00000001)
+
+State 2571 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1457 function thread_1 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000001)
+
+State 2574 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1539 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000001)
+
+State 2578 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1775 function thread_1 thread 0
+----------------------------------------------------
+  dynamic_object1[1 + POINTER_OFFSET(dynamic_object1)]={ 0, 1, 1 }[1 + POINTER_OFFSET(dynamic_object1)] (?)
+
+State 2581 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 1779 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=1 (00000001)
+
+State 2595 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2896 function main thread 0
+----------------------------------------------------
+  pc[2]=129 (10000001)
+
+State 2596 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2899 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 2601 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=11 (00001011)
+
+State 2606 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2901 function main thread 0
+----------------------------------------------------
+  pc_cs=139 (010001011)
+
+State 2610 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2903 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+Violated property:
+  file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_split_further_bitvector.c._pp_.c line 2593 function thread_2
+  assertion array_Value[(signed long int)__csLOCAL_thread_elem] == __csLOCAL_thread_idx
+  array_Value[(signed long int)__csLOCAL_thread_elem] == __csLOCAL_thread_idx
+
+VERIFICATION FAILED
+
+real  35m6.065s
+user  35m0.092s
+sys 0m0.378s

@@ -1,0 +1,1806 @@
+CBMC version 5.3 64-bit x86_64 linux
+Parsing regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c
+file <command-line> line 0: <command-line>:0:0: warning: "__STDC_VERSION__" redefined
+file <command-line> line 0: <built-in>: note: this is the location of the previous definition
+Converting
+Type-checking _cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_
+file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 620 function thread_0: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 62390 steps
+simple slicing removed 655 assignments
+Generated 24 VCC(s), 24 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+1403385 variables, 5410354 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 661.93s
+Building error trace
+
+Counterexample:
+
+State 332 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 154 function __CS_atomic_init_MEMORY thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[0]=1 (00000000000000000000000000000001)
+
+State 333 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 155 function __CS_atomic_init_MEMORY thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[1]=2 (00000000000000000000000000000010)
+
+State 334 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 156 function __CS_atomic_init_MEMORY thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[2]=3 (00000000000000000000000000000011)
+
+State 335 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 157 function __CS_atomic_init_MEMORY thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[3]=4 (00000000000000000000000000000100)
+
+State 336 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 158 function __CS_atomic_init_MEMORY thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[4]=5 (00000000000000000000000000000101)
+
+State 337 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 159 function __CS_atomic_init_MEMORY thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[5]=6 (00000000000000000000000000000110)
+
+State 338 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 160 function __CS_atomic_init_MEMORY thread 0
+----------------------------------------------------
+  num_malloc=1 (00000000000000000000000000000001)
+
+State 340 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2842 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 344 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 349 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2843 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 354 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2727 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_pushCount=3 (00000000000000000000000000000011)
+
+State 357 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2729 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_malloc_size=6 (0000000000000000000000000000000000000000000000000000000000000110)
+
+State 358 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 166 function __CS_atomic_malloc thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_malloc_tmp=1 (00000000000000000000000000000001)
+
+State 359 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 167 function __CS_atomic_malloc thread 0
+----------------------------------------------------
+  num_malloc=7 (00000000000000000000000000000111)
+
+State 362 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2729 function main_thread thread 0
+----------------------------------------------------
+  stack.array=1 (00000000000000000000000000000001)
+
+State 365 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2730 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 366 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2730 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=3 (00000000000000000000000000000011)
+
+State 367 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 196 function __CS_atomic_store thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=3 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000011 })
+
+State 371 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2731 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 372 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2731 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=0 (00000000000000000000000000000000)
+
+State 373 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 196 function __CS_atomic_store thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=3 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000011 })
+
+State 375 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2732 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=0 (00000000000000000000000000000000)
+
+State 379 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2739 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 380 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2739 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=1 (00000000000000000000000000000001)
+
+State 383 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=2 (00000000000000000000000000000010)
+
+State 384 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=1 (00000000000000000000000000000001)
+
+State 385 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=1 (00000000000000000000000000000001)
+
+State 388 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2741 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=1 (00000000000000000000000000000001)
+
+State 392 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2748 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=4 (00000000000000000000000000000100)
+
+State 393 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2748 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=2 (00000000000000000000000000000010)
+
+State 396 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=4 (00000000000000000000000000000100)
+
+State 397 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=2 (00000000000000000000000000000010)
+
+State 398 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[3]=2 (00000000000000000000000000000010)
+
+State 401 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2750 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=2 (00000000000000000000000000000010)
+
+State 406 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2763 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=6 (00000000000000000000000000000110)
+
+State 407 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2763 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 410 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=6 (00000000000000000000000000000110)
+
+State 411 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=-1 (11111111111111111111111111111111)
+
+State 412 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[5]=-1 (11111111111111111111111111111111)
+
+State 416 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2768 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=0 (00000000000000000000000000000000)
+
+State 420 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2775 function main_thread thread 0
+----------------------------------------------------
+  id=threads (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 421 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2775 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 422 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2775 function main_thread thread 0
+----------------------------------------------------
+  t=thread_0 (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 423 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2775 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 424 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2775 function main_thread thread 0
+----------------------------------------------------
+  threadID=1 (00000000000000000000000000000001)
+
+State 426 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[0]=1 (00000000000000000000000000000001)
+
+State 427 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[1]=1 (1)
+
+State 428 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[1]=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 431 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2777 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=1 (00000000000000000000000000000001)
+
+State 436 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2784 function main_thread thread 0
+----------------------------------------------------
+  id=threads + 1 (0000001100000000000000000000000000000000000000000000000000000100)
+
+State 437 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2784 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 438 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2784 function main_thread thread 0
+----------------------------------------------------
+  t=thread_1 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 439 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2784 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 440 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2784 function main_thread thread 0
+----------------------------------------------------
+  threadID=2 (00000000000000000000000000000010)
+
+State 442 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[1]=2 (00000000000000000000000000000010)
+
+State 443 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[2]=1 (1)
+
+State 444 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[2]=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 447 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2786 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=2 (00000000000000000000000000000010)
+
+State 452 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2793 function main_thread thread 0
+----------------------------------------------------
+  id=threads + 2 (0000001100000000000000000000000000000000000000000000000000001000)
+
+State 453 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2793 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 454 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2793 function main_thread thread 0
+----------------------------------------------------
+  t=thread_2 (0000011000000000000000000000000000000000000000000000000000000000)
+
+State 455 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2793 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 456 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2793 function main_thread thread 0
+----------------------------------------------------
+  threadID=3 (00000000000000000000000000000011)
+
+State 458 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threads[2]=3 (00000000000000000000000000000011)
+
+State 459 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[3]=1 (1)
+
+State 460 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 88 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[3]=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 463 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2795 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=3 (00000000000000000000000000000011)
+
+State 466 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2799 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_main_i=0 (00000000000000000000000000000000)
+
+State 474 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2846 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 475 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2848 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 480 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=72 (01001000)
+
+State 485 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2850 function main thread 0
+----------------------------------------------------
+  pc_cs=72 (001001000)
+
+State 489 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2852 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 491 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 273 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=0 (00000000000000000000000000000000)
+
+State 492 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 274 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 497 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 281 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 501 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 281 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 506 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 289 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 509 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 289 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 513 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 291 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 514 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 291 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 515 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=1 (00000000000000000000000000000001)
+
+State 518 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=1 (00000000000000000000000000000001)
+
+State 519 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=-1 (11111111111111111111111111111111)
+
+State 522 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 291 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 524 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 295 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000000000000000000000000000)
+
+State 528 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 297 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 529 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 297 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0000011100000000000000000000000000000000000000000000000000000000)
+
+State 530 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 297 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 532 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=3 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000011 })
+
+State 536 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 297 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 541 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 300 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 542 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 300 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 543 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 260 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=3 (00000000000000000000000000000011)
+
+State 544 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 261 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000010 })
+
+State 547 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 301 function thread_0 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000000000000000000000000000)
+
+State 550 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 383 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000000000000000000000000000)
+
+State 556 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 619 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=1 (00000000000000000000000000000001)
+
+State 557 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 619 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=0 (00000000000000000000000000000000)
+
+State 558 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[0]=0 (00000000000000000000000000000000)
+
+State 564 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 620 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_READ_address=1 (00000000000000000000000000000001)
+
+State 569 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 623 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000000000000000000000000000)
+
+State 573 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 625 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 576 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 625 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000000000000000000000000000001)
+
+State 577 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 628 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 581 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 630 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 582 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 630 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=1 (00000000000000000000000000000001)
+
+State 585 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=2 (00000000000000000000000000000010)
+
+State 586 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=1 (00000000000000000000000000000001)
+
+State 587 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=1 (00000000000000000000000000000001)
+
+State 590 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 632 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 596 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 638 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 597 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 638 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0001000000000000000000000000000000000000000000000000000000000000)
+
+State 598 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 638 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 600 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000010 })
+
+State 605 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 637 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 611 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 670 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 612 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 670 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000000000000000000000000000001)
+
+State 613 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 252 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=2 (00000000000000000000000000000010)
+
+State 614 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 253 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=3 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000011 })
+
+State 618 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 676 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 623 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 683 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 627 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 683 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 632 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 691 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 635 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 691 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 706 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2853 function main thread 0
+----------------------------------------------------
+  pc[1]=72 (01001000)
+
+State 707 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2856 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 712 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 717 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2858 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 721 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2860 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 723 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1092 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=1 (00000000000000000000000000000001)
+
+State 724 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1093 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 729 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1100 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 733 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1100 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 738 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1108 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 741 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1108 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 881 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2861 function main thread 0
+----------------------------------------------------
+  pc[2]=3 (00000011)
+
+State 882 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2864 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 887 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=62 (00111110)
+
+State 892 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2866 function main thread 0
+----------------------------------------------------
+  pc_cs=62 (000111110)
+
+State 896 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2868 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 898 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1909 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_idx=2 (00000000000000000000000000000010)
+
+State 899 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1910 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 904 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1917 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 908 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1917 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 913 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1925 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 916 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1925 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 920 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1927 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 921 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1927 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 922 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=1 (00000000000000000000000000000001)
+
+State 925 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=1 (00000000000000000000000000000001)
+
+State 926 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=-1 (11111111111111111111111111111111)
+
+State 929 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1927 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 931 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1931 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000000000000000000000000000)
+
+State 935 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1933 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 936 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1933 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0010111100000000000000000000000000000000000000000000000000000000)
+
+State 937 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1933 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 939 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=3 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000011 })
+
+State 943 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1933 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 948 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1936 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 949 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1936 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 950 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 260 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=3 (00000000000000000000000000000011)
+
+State 951 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 261 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000010 })
+
+State 954 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1937 function thread_2 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000000000000000000000000000)
+
+State 957 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2019 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000000000000000000000000000)
+
+State 963 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2255 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=1 (00000000000000000000000000000001)
+
+State 964 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2255 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=2 (00000000000000000000000000000010)
+
+State 965 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[0]=2 (00000000000000000000000000000010)
+
+State 971 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2256 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_READ_address=1 (00000000000000000000000000000001)
+
+State 976 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2259 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000000000000000000000000000)
+
+State 980 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2261 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 983 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2261 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000000000000000000000000000001)
+
+State 984 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2264 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 988 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2266 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 989 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2266 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=1 (00000000000000000000000000000001)
+
+State 992 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=2 (00000000000000000000000000000010)
+
+State 993 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=1 (00000000000000000000000000000001)
+
+State 994 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=1 (00000000000000000000000000000001)
+
+State 997 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2268 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 1079 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2869 function main thread 0
+----------------------------------------------------
+  pc[3]=62 (00111110)
+
+State 1080 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2873 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 1085 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 1090 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2875 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 1103 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2878 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 1104 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2881 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 1109 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 1114 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2883 function main thread 0
+----------------------------------------------------
+  pc_cs=73 (001001001)
+
+State 1118 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2885 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1194 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 693 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 1195 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 693 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 1196 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=1 (00000000000000000000000000000001)
+
+State 1199 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=1 (00000000000000000000000000000001)
+
+State 1200 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=-1 (11111111111111111111111111111111)
+
+State 1203 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 693 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 1205 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 697 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000000000000000000000000000)
+
+State 1275 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2886 function main thread 0
+----------------------------------------------------
+  pc[1]=73 (01001001)
+
+State 1276 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2889 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 1281 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=59 (00111011)
+
+State 1286 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2891 function main thread 0
+----------------------------------------------------
+  pc_cs=62 (000111110)
+
+State 1290 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2893 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1297 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1110 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 1298 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1110 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 1299 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=1 (00000000000000000000000000000001)
+
+State 1302 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=-1 (11111111111111111111111111111111)
+
+State 1303 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=-1 (11111111111111111111111111111111)
+
+State 1306 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1110 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=-1 (11111111111111111111111111111111)
+
+State 1313 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1130 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 1317 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1130 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1322 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1139 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 1325 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1139 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000000000000000000000000000001)
+
+State 1329 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1141 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=4 (00000000000000000000000000000100)
+
+State 1330 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1141 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 1331 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=3 (00000000000000000000000000000011)
+
+State 1334 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=2 (00000000000000000000000000000010)
+
+State 1335 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[3]=-1 (11111111111111111111111111111111)
+
+State 1338 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1141 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=2 (00000000000000000000000000000010)
+
+State 1340 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1145 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000000000000000000000000000001)
+
+State 1344 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1147 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 1345 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1147 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0001110000000000000000000000000000000000000000000000000000000000)
+
+State 1346 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1147 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=2 (00000000000000000000000000000010)
+
+State 1348 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=2, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000010, 00000000000000000000000000000010 })
+
+State 1352 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1147 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 1357 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1150 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 1358 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1150 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 1359 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 260 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000000000000000000000000000010)
+
+State 1360 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 261 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=2, .count=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000010, 00000000000000000000000000000001 })
+
+State 1363 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1151 function thread_1 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000000000000000000000000000001)
+
+State 1366 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1202 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000000000000000000000000000001)
+
+State 1372 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1438 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=3 (00000000000000000000000000000011)
+
+State 1373 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1438 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=1 (00000000000000000000000000000001)
+
+State 1374 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[2]=1 (00000000000000000000000000000001)
+
+State 1380 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1439 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_READ_address=3 (00000000000000000000000000000011)
+
+State 1385 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1442 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=1 (00000000000000000000000000000001)
+
+State 1389 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1444 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 1392 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1444 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=2 (00000000000000000000000000000010)
+
+State 1393 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1447 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 1397 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1449 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=4 (00000000000000000000000000000100)
+
+State 1398 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1449 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=2 (00000000000000000000000000000010)
+
+State 1401 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=4 (00000000000000000000000000000100)
+
+State 1402 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=2 (00000000000000000000000000000010)
+
+State 1403 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[3]=2 (00000000000000000000000000000010)
+
+State 1406 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1451 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 1489 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2894 function main thread 0
+----------------------------------------------------
+  pc[2]=62 (00111110)
+
+State 1490 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2897 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 1495 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=10 (00001010)
+
+State 1500 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2899 function main thread 0
+----------------------------------------------------
+  pc_cs=72 (001001000)
+
+State 1504 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2901 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1571 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2273 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 1572 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2273 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0011100000000000000000000000000000000000000000000000000000000000)
+
+State 1573 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2273 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 1575 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 243 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=2 (00000000000000000000000000000010)
+
+State 1580 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2273 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=TRUE (00000001)
+
+State 1585 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2280 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 1586 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2280 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=2 (00000000000000000000000000000010)
+
+State 1589 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=2 (00000000000000000000000000000010)
+
+State 1590 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=2 (00000000000000000000000000000010)
+
+State 1591 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=2 (00000000000000000000000000000010)
+
+State 1598 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2281 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 1599 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2281 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0011100000000000000000000000000000000000000000000000000000000000)
+
+State 1600 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2281 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 1602 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000001 })
+
+State 1607 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2281 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 1613 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2304 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 1614 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2304 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000000000000000000000000000001)
+
+State 1615 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 252 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (00000000000000000000000000000001)
+
+State 1616 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 253 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000010 })
+
+State 1620 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2310 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1625 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2317 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 1629 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2317 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 1634 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2325 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 1637 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2325 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=0 (00000000000000000000000000000000)
+
+State 1708 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2902 function main thread 0
+----------------------------------------------------
+  pc[3]=72 (01001000)
+
+State 1709 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2906 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 1714 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 1719 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2908 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 1732 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2911 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 1733 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2914 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 1738 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 1743 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2916 function main thread 0
+----------------------------------------------------
+  pc_cs=74 (001001010)
+
+State 1747 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2918 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1824 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 699 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 1825 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 699 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0001000100000000000000000000000000000000000000000000000000000000)
+
+State 1826 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 699 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 1828 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000010 })
+
+State 1832 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 699 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 1902 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2919 function main thread 0
+----------------------------------------------------
+  pc[1]=74 (01001010)
+
+State 1903 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2922 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 1908 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=2 (00000010)
+
+State 1913 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2924 function main thread 0
+----------------------------------------------------
+  pc_cs=64 (001000000)
+
+State 1917 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2926 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1984 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1456 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 1985 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1456 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010010000000000000000000000000000000000000000000000000000000000)
+
+State 1986 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1456 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 1988 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 243 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000000000000000000000000000001)
+
+State 1993 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1456 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=TRUE (00000001)
+
+State 1998 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1463 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=4 (00000000000000000000000000000100)
+
+State 1999 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1463 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=1 (00000000000000000000000000000001)
+
+State 2002 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=4 (00000000000000000000000000000100)
+
+State 2003 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=1 (00000000000000000000000000000001)
+
+State 2004 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[3]=1 (00000000000000000000000000000001)
+
+State 2085 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2927 function main thread 0
+----------------------------------------------------
+  pc[2]=64 (01000000)
+
+State 2086 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2930 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 2091 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=56 (00111000)
+
+State 2096 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2932 function main thread 0
+----------------------------------------------------
+  pc_cs=128 (010000000)
+
+State 2100 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2934 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 2176 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2327 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 2177 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2327 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 2178 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=1 (00000000000000000000000000000001)
+
+State 2181 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=2 (00000000000000000000000000000010)
+
+State 2182 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=-1 (11111111111111111111111111111111)
+
+State 2185 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2327 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=2 (00000000000000000000000000000010)
+
+State 2187 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2331 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=0 (00000000000000000000000000000000)
+
+State 2191 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2333 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2192 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2333 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0011100100000000000000000000000000000000000000000000000000000000)
+
+State 2193 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2333 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=2 (00000000000000000000000000000010)
+
+State 2195 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 243 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000000000000000000000000000001)
+
+State 2199 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2333 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=FALSE (00000000)
+
+State 2205 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2342 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 2206 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2342 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=2 (00000000000000000000000000000010)
+
+State 2207 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=1 (00000000000000000000000000000001)
+
+State 2210 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=-1 (11111111111111111111111111111111)
+
+State 2211 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=2 (00000000000000000000000000000010)
+
+State 2220 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2347 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 2224 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2347 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 2229 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2356 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2232 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2356 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000000000000000000000000000001)
+
+State 2236 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2358 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=4 (00000000000000000000000000000100)
+
+State 2237 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2358 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 2238 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=3 (00000000000000000000000000000011)
+
+State 2241 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=1 (00000000000000000000000000000001)
+
+State 2242 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[3]=-1 (11111111111111111111111111111111)
+
+State 2245 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2358 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=1 (00000000000000000000000000000001)
+
+State 2247 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2362 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000000000000000000000000000001)
+
+State 2251 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2364 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2252 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2364 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0011101000000000000000000000000000000000000000000000000000000000)
+
+State 2253 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2364 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 2255 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000010 })
+
+State 2259 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2364 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 2264 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2367 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 2265 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2367 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 2266 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 260 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000000000000000000000000000010)
+
+State 2267 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 261 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000001 })
+
+State 2270 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2368 function thread_2 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000000000000000000000000000001)
+
+State 2273 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2419 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000000000000000000000000000001)
+
+State 2279 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2655 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=3 (00000000000000000000000000000011)
+
+State 2280 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2655 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=2 (00000000000000000000000000000010)
+
+State 2281 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[2]=2 (00000000000000000000000000000010)
+
+State 2297 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2935 function main thread 0
+----------------------------------------------------
+  pc[3]=128 (10000000)
+
+State 2298 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2939 function main thread 0
+----------------------------------------------------
+  thread_index=0 (00000000000000000000000000000000)
+
+State 2303 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 2308 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2941 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 2321 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2944 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 2322 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2947 function main thread 0
+----------------------------------------------------
+  thread_index=1 (00000000000000000000000000000001)
+
+State 2327 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=65 (01000001)
+
+State 2332 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2949 function main thread 0
+----------------------------------------------------
+  pc_cs=139 (010001011)
+
+State 2336 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2951 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 2414 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 702 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 2415 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 702 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 2416 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 260 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=1 (00000000000000000000000000000001)
+
+State 2417 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 261 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=0 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000000 })
+
+State 2420 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 703 function thread_0 thread 0
+----------------------------------------------------
+  __retval__Pop_1=0 (00000000000000000000000000000000)
+
+State 2423 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 785 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=0 (00000000000000000000000000000000)
+
+State 2429 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1021 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=1 (00000000000000000000000000000001)
+
+State 2430 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1021 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=0 (00000000000000000000000000000000)
+
+State 2431 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[0]=0 (00000000000000000000000000000000)
+
+State 2437 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1022 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_READ_address=1 (00000000000000000000000000000001)
+
+State 2442 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1025 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push_index=0 (00000000000000000000000000000000)
+
+State 2446 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1027 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2449 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1027 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=1 (00000000000000000000000000000001)
+
+State 2450 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1030 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 2454 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1032 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=2 (00000000000000000000000000000010)
+
+State 2455 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1032 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=1 (00000000000000000000000000000001)
+
+State 2458 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=2 (00000000000000000000000000000010)
+
+State 2459 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=1 (00000000000000000000000000000001)
+
+State 2460 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[1]=1 (00000000000000000000000000000001)
+
+State 2463 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1034 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 2470 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1039 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2471 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1039 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0001101000000000000000000000000000000000000000000000000000000000)
+
+State 2472 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1039 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 2474 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=0 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000000 })
+
+State 2479 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1039 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 2485 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1070 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 2486 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1070 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000000000000000000000000000001)
+
+State 2487 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 252 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=0 (00000000000000000000000000000000)
+
+State 2488 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 253 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000001 })
+
+State 2492 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1076 function thread_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 2499 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2952 function main thread 0
+----------------------------------------------------
+  pc[1]=139 (10001011)
+
+State 2500 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2955 function main thread 0
+----------------------------------------------------
+  thread_index=2 (00000000000000000000000000000010)
+
+State 2505 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=64 (01000000)
+
+State 2510 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2957 function main thread 0
+----------------------------------------------------
+  pc_cs=128 (010000000)
+
+State 2514 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2959 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2583 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1464 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2584 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1464 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010010000000000000000000000000000000000000000000000000000000000)
+
+State 2585 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1464 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 2587 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 243 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push_head1=0 (00000000000000000000000000000000)
+
+State 2592 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1464 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=TRUE (00000001)
+
+State 2597 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1472 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_obj=4 (00000000000000000000000000000100)
+
+State 2598 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1472 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_ADDR_v=0 (00000000000000000000000000000000)
+
+State 2601 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=4 (00000000000000000000000000000100)
+
+State 2602 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 201 function __CS_atomic_store_ADDR thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=0 (00000000000000000000000000000000)
+
+State 2603 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[3]=0 (00000000000000000000000000000000)
+
+State 2610 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1473 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2611 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1473 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push_head1 (0010010000000000000000000000000000000000000000000000000000000000)
+
+State 2612 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1473 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (00000000000000000000000000000001)
+
+State 2614 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000001 })
+
+State 2619 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1473 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Push___while_cond_1=FALSE (00000000)
+
+State 2625 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1487 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 2626 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1487 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (00000000000000000000000000000001)
+
+State 2627 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 252 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (00000000000000000000000000000001)
+
+State 2628 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 253 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=1, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000001, 00000000000000000000000000000010 })
+
+State 2632 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1493 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2637 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1500 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 2641 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1500 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___while_cond_0=TRUE (00000001)
+
+State 2646 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1508 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2649 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1508 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head1=1 (00000000000000000000000000000001)
+
+State 2653 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1510 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_obj=4 (00000000000000000000000000000100)
+
+State 2654 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1510 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_ADDR_v=-1 (11111111111111111111111111111111)
+
+State 2655 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 225 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_pos=3 (00000000000000000000000000000011)
+
+State 2658 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 229 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_ADDR_t=0 (00000000000000000000000000000000)
+
+State 2659 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 230 function __CS_atomic_exchange_ADDR thread 0
+----------------------------------------------------
+  TRACK_VALUE[3]=-1 (11111111111111111111111111111111)
+
+State 2662 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1510 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_next1=0 (00000000000000000000000000000000)
+
+State 2664 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1514 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop_head2=1 (00000000000000000000000000000001)
+
+State 2668 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1516 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=&stack.head (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 2669 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1516 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop_head2 (0010010100000000000000000000000000000000000000000000000000000000)
+
+State 2670 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1516 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (00000000000000000000000000000000)
+
+State 2672 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 238 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=2 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000010 })
+
+State 2676 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1516 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop___if_cond_0=TRUE (00000001)
+
+State 2681 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1519 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=&stack.count (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 2682 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1519 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (00000000000000000000000000000001)
+
+State 2683 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 260 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (00000000000000000000000000000010)
+
+State 2684 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 261 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  stack={ .array=1, .head=0, .count=1 } ({ 00000000000000000000000000000001, 00000000000000000000000000000000, 00000000000000000000000000000001 })
+
+State 2687 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1520 function thread_1 thread 0
+----------------------------------------------------
+  __retval__Pop_1=1 (00000000000000000000000000000001)
+
+State 2690 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1602 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCAL_thread_elem=1 (00000000000000000000000000000001)
+
+State 2696 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1838 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_address=3 (00000000000000000000000000000011)
+
+State 2697 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 1838 function thread_1 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_WRITE_value=1 (00000000000000000000000000000001)
+
+State 2698 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 182 function __CS_atomic_WRITE thread 0
+----------------------------------------------------
+  TRACK_VALUE[2]=1 (00000000000000000000000000000001)
+
+State 2714 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2960 function main thread 0
+----------------------------------------------------
+  pc[2]=128 (10000000)
+
+State 2715 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2963 function main thread 0
+----------------------------------------------------
+  thread_index=3 (00000000000000000000000000000011)
+
+State 2720 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 143 function guess_pc thread 0
+----------------------------------------------------
+  i=8 (00001000)
+
+State 2725 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2965 function main thread 0
+----------------------------------------------------
+  pc_cs=136 (010001000)
+
+State 2729 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2967 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 2862 file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2656 function thread_2 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_READ_address=3 (00000000000000000000000000000011)
+
+Violated property:
+  file regression/pointertranslation/_cs_SafeStack_seqcst_forCSEQ_Mem_ver5.c._pp_.c line 2656 function thread_2
+  assertion return_value___CS_atomic_READ$30 == __csLOCAL_thread_idx
+  return_value___CS_atomic_READ$30 == __csLOCAL_thread_idx
+
+VERIFICATION FAILED
+
+real  12m44.518s
+user  12m43.163s
+sys 0m0.196s

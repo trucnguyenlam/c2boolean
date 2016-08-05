@@ -1,0 +1,5 @@
+1. Array of structure is badly handled in CBMC
+2. Pushing out things from structure help CBMC
+3. Reducing number of bits help CBMC
+4. Memory model is not good as normal memory model of CBMC for general type
+5. When reducing number of bits, memory model works better than normal CBMC model

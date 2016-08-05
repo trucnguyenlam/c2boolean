@@ -1,0 +1,1378 @@
+CBMC version 5.3 64-bit x86_64 linux
+Parsing regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c
+file <command-line> line 0: <command-line>:0:0: warning: "__STDC_VERSION__" redefined
+file <command-line> line 0: <built-in>: note: this is the location of the previous definition
+Converting
+Type-checking safestack_mem_ver6_nolocal_bitvector_nostackvar
+file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 573 function thread0_0: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 63089 steps
+simple slicing removed 552 assignments
+Generated 24 VCC(s), 24 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+574973 variables, 2230224 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 4627.77s
+Building error trace
+
+Counterexample:
+
+State 320 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2741 function main thread 0
+----------------------------------------------------
+  thread_index=0 (0000)
+
+State 324 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 329 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2742 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 334 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2683 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Init_pushCount=3 (0011)
+
+State 335 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2685 function main_thread thread 0
+----------------------------------------------------
+  MEMORY_VALUE[0]=3 (0011)
+
+State 338 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2686 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=2 (0010)
+
+State 339 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2686 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=3 (0011)
+
+State 340 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=3 (0011)
+
+State 344 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2687 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=1 (0001)
+
+State 345 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2687 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=0 (0000)
+
+State 346 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=0 (0000)
+
+State 348 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2688 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=0 (00000000000000000000000000000000)
+
+State 352 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2695 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=4 (0100)
+
+State 353 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2695 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (0001)
+
+State 354 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=1 (0001)
+
+State 356 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2697 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=1 (00000000000000000000000000000001)
+
+State 360 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2704 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=6 (0110)
+
+State 361 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2704 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (0010)
+
+State 362 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[6]=2 (0010)
+
+State 364 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2706 function main_thread thread 0
+----------------------------------------------------
+  __csLOCAL_Init_i=2 (00000000000000000000000000000010)
+
+State 369 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2719 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=8 (1000)
+
+State 370 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2719 function main_thread thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=-1 (1111)
+
+State 371 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[8]=-1 (1111)
+
+State 376 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2724 function main_thread thread 0
+----------------------------------------------------
+  id=threads (0000001000000000000000000000000000000000000000000000000000000000)
+
+State 377 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2724 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 378 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2724 function main_thread thread 0
+----------------------------------------------------
+  t=thread0_0 (0000001100000000000000000000000000000000000000000000000000000000)
+
+State 379 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2724 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 380 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2724 function main_thread thread 0
+----------------------------------------------------
+  threadID=1 (00000000000000000000000000000001)
+
+State 382 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  threads[0]=1 (00000000000000000000000000000001)
+
+State 383 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[1]=1 (1)
+
+State 384 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[1]=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 390 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2725 function main_thread thread 0
+----------------------------------------------------
+  id=threads + 1 (0000001000000000000000000000000000000000000000000000000000000100)
+
+State 391 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2725 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 392 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2725 function main_thread thread 0
+----------------------------------------------------
+  t=thread1_0 (0000010000000000000000000000000000000000000000000000000000000000)
+
+State 393 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2725 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 394 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2725 function main_thread thread 0
+----------------------------------------------------
+  threadID=2 (00000000000000000000000000000010)
+
+State 396 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  threads[1]=2 (00000000000000000000000000000010)
+
+State 397 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[2]=1 (1)
+
+State 398 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[2]=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 404 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2726 function main_thread thread 0
+----------------------------------------------------
+  id=threads + 2 (0000001000000000000000000000000000000000000000000000000000001000)
+
+State 405 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2726 function main_thread thread 0
+----------------------------------------------------
+  attr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 406 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2726 function main_thread thread 0
+----------------------------------------------------
+  t=thread2_0 (0000010100000000000000000000000000000000000000000000000000000000)
+
+State 407 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2726 function main_thread thread 0
+----------------------------------------------------
+  arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 408 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2726 function main_thread thread 0
+----------------------------------------------------
+  threadID=3 (00000000000000000000000000000011)
+
+State 410 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  threads[2]=3 (00000000000000000000000000000011)
+
+State 411 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  active_thread[3]=1 (1)
+
+State 412 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 102 function __cs_create thread 0
+----------------------------------------------------
+  threadargs[3]=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 421 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2745 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 422 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2747 function main thread 0
+----------------------------------------------------
+  thread_index=1 (0001)
+
+State 427 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=3 (00000011)
+
+State 432 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2749 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 436 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2751 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread0_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 438 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 226 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread0_idx=0 (00000000000000000000000000000000)
+
+State 439 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 227 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread0_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 444 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 234 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=2 (0010)
+
+State 448 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 234 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0___while_cond_0=TRUE (00000001)
+
+State 454 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 242 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 458 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 242 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0_head1=0 (00000000000000000000000000000000)
+
+State 598 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2752 function main thread 0
+----------------------------------------------------
+  pc[1]=3 (00000011)
+
+State 599 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2755 function main thread 0
+----------------------------------------------------
+  thread_index=2 (0010)
+
+State 604 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=62 (00111110)
+
+State 609 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2757 function main thread 0
+----------------------------------------------------
+  pc_cs=62 (000111110)
+
+State 613 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2759 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread1_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 615 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1045 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread1_idx=1 (00000000000000000000000000000001)
+
+State 616 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1046 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread1_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 621 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1053 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=2 (0010)
+
+State 625 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1053 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1___while_cond_1=TRUE (00000001)
+
+State 631 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1061 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 635 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1061 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1_head1=0 (00000000000000000000000000000000)
+
+State 640 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1063 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=4 (0100)
+
+State 641 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1063 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (1111)
+
+State 642 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 178 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0001)
+
+State 643 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=-1 (1111)
+
+State 647 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1063 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1_next1=1 (00000000000000000000000000000001)
+
+State 649 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1067 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1_head21=0 (00000000000000000000000000000000)
+
+State 653 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1069 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 654 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1069 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop1_head21 (0001101000000000000000000000000000000000000000000000000000000000)
+
+State 655 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1069 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (0001)
+
+State 657 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=1 (0001)
+
+State 661 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1069 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1___if_cond_1=TRUE (00000001)
+
+State 666 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1072 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=2 (0010)
+
+State 667 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1072 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (0001)
+
+State 668 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 209 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=3 (0011)
+
+State 669 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 210 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=2 (0010)
+
+State 672 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1073 function thread1_0 thread 0
+----------------------------------------------------
+  __retval__Pop1_1=0 (00000000000000000000000000000000)
+
+State 675 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1155 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread1_elem=0 (00000000000000000000000000000000)
+
+State 679 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1391 function thread1_0 thread 0
+----------------------------------------------------
+  MEMORY_VALUE[3]=1 (0001)
+
+State 682 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1395 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push1_index=0 (00000000000000000000000000000000)
+
+State 687 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1397 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 691 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1397 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push1_head11=1 (00000000000000000000000000000001)
+
+State 692 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1400 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push1___cs_dowhile_onetime_2=0 (00000000000000000000000000000000)
+
+State 696 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1402 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=4 (0100)
+
+State 697 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1402 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (0001)
+
+State 698 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=1 (0001)
+
+State 700 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1404 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push1___cs_dowhile_onetime_2=1 (00000000000000000000000000000001)
+
+State 782 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2760 function main thread 0
+----------------------------------------------------
+  pc[2]=62 (00111110)
+
+State 783 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2763 function main thread 0
+----------------------------------------------------
+  thread_index=3 (0011)
+
+State 788 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=5 (00000101)
+
+State 793 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2765 function main thread 0
+----------------------------------------------------
+  pc_cs=5 (000000101)
+
+State 797 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2767 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread2_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 799 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1864 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread2_idx=2 (00000000000000000000000000000010)
+
+State 800 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1865 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread2_i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 805 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1872 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=2 (0010)
+
+State 809 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1872 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2___while_cond_2=TRUE (00000001)
+
+State 815 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1880 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 819 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1880 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2_head1=1 (00000000000000000000000000000001)
+
+State 824 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1882 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=6 (0110)
+
+State 825 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1882 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (1111)
+
+State 826 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 178 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=2 (0010)
+
+State 827 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[6]=-1 (1111)
+
+State 831 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1882 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2_next1=2 (00000000000000000000000000000010)
+
+State 833 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1886 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2_head22=1 (00000000000000000000000000000001)
+
+State 837 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1888 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 838 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1888 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop2_head22 (0010111000000000000000000000000000000000000000000000000000000000)
+
+State 839 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1888 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=2 (0010)
+
+State 841 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=2 (0010)
+
+State 845 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1888 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2___if_cond_2=TRUE (00000001)
+
+State 984 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2768 function main thread 0
+----------------------------------------------------
+  pc[3]=5 (00000101)
+
+State 985 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2772 function main thread 0
+----------------------------------------------------
+  thread_index=0 (0000)
+
+State 990 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 995 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2774 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 1008 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2777 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 1009 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2780 function main thread 0
+----------------------------------------------------
+  thread_index=1 (0001)
+
+State 1014 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 1019 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2782 function main thread 0
+----------------------------------------------------
+  pc_cs=4 (000000100)
+
+State 1023 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2784 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread0_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1031 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 244 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=4 (0100)
+
+State 1032 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 244 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (1111)
+
+State 1033 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 178 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0001)
+
+State 1034 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=-1 (1111)
+
+State 1038 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 244 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0_next1=1 (00000000000000000000000000000001)
+
+State 1040 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 248 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0_head20=0 (00000000000000000000000000000000)
+
+State 1179 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2785 function main thread 0
+----------------------------------------------------
+  pc[1]=4 (00000100)
+
+State 1180 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2788 function main thread 0
+----------------------------------------------------
+  thread_index=2 (0010)
+
+State 1185 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=10 (00001010)
+
+State 1190 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2790 function main thread 0
+----------------------------------------------------
+  pc_cs=72 (001001000)
+
+State 1194 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2792 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread1_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1261 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1410 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 1262 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1410 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push1_head11 (0010001100000000000000000000000000000000000000000000000000000000)
+
+State 1263 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1410 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (0000)
+
+State 1265 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 192 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push1_head11=2 (00000000000000000000000000000010)
+
+State 1270 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1409 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push1___while_cond_4=TRUE (00000001)
+
+State 1275 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1417 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=4 (0100)
+
+State 1276 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1417 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=2 (0010)
+
+State 1277 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=2 (0010)
+
+State 1283 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1419 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 1284 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1419 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push1_head11 (0010001100000000000000000000000000000000000000000000000000000000)
+
+State 1285 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1419 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (0000)
+
+State 1287 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=0 (0000)
+
+State 1292 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1418 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push1___while_cond_4=FALSE (00000000)
+
+State 1298 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1442 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=2 (0010)
+
+State 1299 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1442 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (0001)
+
+State 1300 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 201 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=2 (0010)
+
+State 1301 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 202 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=3 (0011)
+
+State 1305 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1448 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread1_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1310 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1455 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=2 (0010)
+
+State 1314 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1455 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1___while_cond_1=TRUE (00000001)
+
+State 1320 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1463 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 1324 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1463 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1_head1=0 (00000000000000000000000000000000)
+
+State 1395 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2793 function main thread 0
+----------------------------------------------------
+  pc[2]=72 (01001000)
+
+State 1396 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2796 function main thread 0
+----------------------------------------------------
+  thread_index=3 (0011)
+
+State 1401 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=57 (00111001)
+
+State 1406 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2798 function main thread 0
+----------------------------------------------------
+  pc_cs=62 (000111110)
+
+State 1410 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2800 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread2_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 1419 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1891 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=2 (0010)
+
+State 1420 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1891 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (0001)
+
+State 1421 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 209 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=3 (0011)
+
+State 1422 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 210 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=2 (0010)
+
+State 1425 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1892 function thread2_0 thread 0
+----------------------------------------------------
+  __retval__Pop2_1=1 (00000000000000000000000000000001)
+
+State 1428 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1974 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread2_elem=1 (00000000000000000000000000000001)
+
+State 1432 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2210 function thread2_0 thread 0
+----------------------------------------------------
+  MEMORY_VALUE[5]=2 (0010)
+
+State 1435 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2214 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push2_index=1 (00000000000000000000000000000001)
+
+State 1440 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2216 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 1444 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2216 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push2_head12=0 (00000000000000000000000000000000)
+
+State 1445 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2219 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push2___cs_dowhile_onetime_3=0 (00000000000000000000000000000000)
+
+State 1449 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2221 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=6 (0110)
+
+State 1450 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2221 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=0 (0000)
+
+State 1451 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[6]=0 (0000)
+
+State 1453 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2223 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push2___cs_dowhile_onetime_3=1 (00000000000000000000000000000001)
+
+State 1536 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2801 function main thread 0
+----------------------------------------------------
+  pc[3]=62 (00111110)
+
+State 1537 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2805 function main thread 0
+----------------------------------------------------
+  thread_index=0 (0000)
+
+State 1542 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 1547 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2807 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 1560 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2810 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 1561 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2813 function main thread 0
+----------------------------------------------------
+  thread_index=1 (0001)
+
+State 1566 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=70 (01000110)
+
+State 1571 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2815 function main thread 0
+----------------------------------------------------
+  pc_cs=74 (001001010)
+
+State 1575 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2817 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread0_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 1583 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 250 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 1584 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 250 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop0_head20 (0000011000000000000000000000000000000000000000000000000000000000)
+
+State 1585 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 250 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (0001)
+
+State 1587 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=1 (0001)
+
+State 1591 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 250 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0___if_cond_0=TRUE (00000001)
+
+State 1596 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 253 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=2 (0010)
+
+State 1597 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 253 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (0001)
+
+State 1598 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 209 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (0010)
+
+State 1599 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 210 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=1 (0001)
+
+State 1602 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 254 function thread0_0 thread 0
+----------------------------------------------------
+  __retval__Pop0_1=0 (00000000000000000000000000000000)
+
+State 1605 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 336 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread0_elem=0 (00000000000000000000000000000000)
+
+State 1609 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 572 function thread0_0 thread 0
+----------------------------------------------------
+  MEMORY_VALUE[3]=0 (0000)
+
+State 1612 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 576 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM_Push0_index=0 (00000000000000000000000000000000)
+
+State 1617 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 578 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 1621 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 578 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push0_head10=1 (00000000000000000000000000000001)
+
+State 1622 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 581 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push0___cs_dowhile_onetime_1=0 (00000000000000000000000000000000)
+
+State 1626 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 583 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=4 (0100)
+
+State 1627 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 583 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (0001)
+
+State 1628 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=1 (0001)
+
+State 1630 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 585 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push0___cs_dowhile_onetime_1=1 (00000000000000000000000000000001)
+
+State 1637 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 591 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 1638 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 591 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push0_head10 (0000111100000000000000000000000000000000000000000000000000000000)
+
+State 1639 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 591 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (0000)
+
+State 1641 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=0 (0000)
+
+State 1646 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 590 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push0___while_cond_3=FALSE (00000000)
+
+State 1652 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 623 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=2 (0010)
+
+State 1653 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 623 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (0001)
+
+State 1654 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 201 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=1 (0001)
+
+State 1655 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 202 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=2 (0010)
+
+State 1659 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 629 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread0_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1664 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 636 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=2 (0010)
+
+State 1668 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 636 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0___while_cond_0=TRUE (00000001)
+
+State 1674 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 644 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 1678 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 644 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0_head1=0 (00000000000000000000000000000000)
+
+State 1683 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 646 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=4 (0100)
+
+State 1684 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 646 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (1111)
+
+State 1685 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 178 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0001)
+
+State 1686 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=-1 (1111)
+
+State 1690 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 646 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0_next1=1 (00000000000000000000000000000001)
+
+State 1692 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 650 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0_head20=0 (00000000000000000000000000000000)
+
+State 1696 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 652 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 1697 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 652 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop0_head20 (0001000000000000000000000000000000000000000000000000000000000000)
+
+State 1698 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 652 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (0001)
+
+State 1700 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=1 (0001)
+
+State 1704 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 652 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop0___if_cond_0=TRUE (00000001)
+
+State 1774 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2818 function main thread 0
+----------------------------------------------------
+  pc[1]=74 (01001010)
+
+State 1775 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2821 function main thread 0
+----------------------------------------------------
+  thread_index=2 (0010)
+
+State 1780 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=7 (00000111)
+
+State 1785 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2823 function main thread 0
+----------------------------------------------------
+  pc_cs=79 (001001111)
+
+State 1789 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2825 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread1_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 1866 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1465 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=4 (0100)
+
+State 1867 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1465 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (1111)
+
+State 1868 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 178 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=-1 (1111)
+
+State 1869 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[4]=-1 (1111)
+
+State 1873 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1465 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1_next1=-1 (11111111111111111111111111111111)
+
+State 1880 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1485 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=2 (0010)
+
+State 1884 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1485 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1___while_cond_1=TRUE (00000001)
+
+State 1890 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1494 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 1894 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1494 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1_head1=1 (00000000000000000000000000000001)
+
+State 1899 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1496 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=6 (0110)
+
+State 1900 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1496 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (1111)
+
+State 1901 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 178 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=0 (0000)
+
+State 1902 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[6]=-1 (1111)
+
+State 1906 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1496 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1_next1=0 (00000000000000000000000000000000)
+
+State 1908 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1500 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1_head21=1 (00000000000000000000000000000001)
+
+State 1972 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2826 function main thread 0
+----------------------------------------------------
+  pc[2]=79 (01001111)
+
+State 1973 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2829 function main thread 0
+----------------------------------------------------
+  thread_index=3 (0011)
+
+State 1978 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=66 (01000010)
+
+State 1983 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2831 function main thread 0
+----------------------------------------------------
+  pc_cs=128 (010000000)
+
+State 1987 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2833 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread2_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 2054 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2229 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 2055 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2229 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push2_head12 (0011011100000000000000000000000000000000000000000000000000000000)
+
+State 2056 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2229 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (0001)
+
+State 2058 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 192 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  __csLOCAL_Push2_head12=1 (00000000000000000000000000000001)
+
+State 2063 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2228 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push2___while_cond_5=TRUE (00000001)
+
+State 2068 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2236 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_obj=6 (0110)
+
+State 2069 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2236 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_store_v=1 (0001)
+
+State 2070 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 167 function __CS_atomic_store thread 0
+----------------------------------------------------
+  MEMORY_VALUE[6]=1 (0001)
+
+State 2076 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2238 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 2077 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2238 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Push2_head12 (0011011100000000000000000000000000000000000000000000000000000000)
+
+State 2078 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2238 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (0001)
+
+State 2080 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=1 (0001)
+
+State 2085 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2237 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Push2___while_cond_5=FALSE (00000000)
+
+State 2091 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2261 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_obj=2 (0010)
+
+State 2092 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2261 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_add_v=1 (0001)
+
+State 2093 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 201 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_add_old=2 (0010)
+
+State 2094 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 202 function __CS_atomic_fetch_add thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=3 (0011)
+
+State 2098 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2267 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread2_i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2103 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2274 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=2 (0010)
+
+State 2107 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2274 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2___while_cond_2=TRUE (00000001)
+
+State 2113 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2282 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_load_obj=1 (0001)
+
+State 2117 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2282 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2_head1=1 (00000000000000000000000000000001)
+
+State 2122 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2284 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_obj=6 (0110)
+
+State 2123 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2284 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_exchange_v=-1 (1111)
+
+State 2124 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 178 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_exchange_t=1 (0001)
+
+State 2125 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 179 function __CS_atomic_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[6]=-1 (1111)
+
+State 2129 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2284 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2_next1=1 (00000000000000000000000000000001)
+
+State 2131 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2288 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2_head22=1 (00000000000000000000000000000001)
+
+State 2135 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2290 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 2136 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2290 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop2_head22 (0011100000000000000000000000000000000000000000000000000000000000)
+
+State 2137 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2290 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=1 (0001)
+
+State 2139 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=1 (0001)
+
+State 2143 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2290 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop2___if_cond_2=TRUE (00000001)
+
+State 2148 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2293 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=2 (0010)
+
+State 2149 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2293 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (0001)
+
+State 2150 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 209 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=3 (0011)
+
+State 2151 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 210 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=2 (0010)
+
+State 2154 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2294 function thread2_0 thread 0
+----------------------------------------------------
+  __retval__Pop2_1=1 (00000000000000000000000000000001)
+
+State 2157 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2376 function thread2_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread2_elem=1 (00000000000000000000000000000001)
+
+State 2161 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2612 function thread2_0 thread 0
+----------------------------------------------------
+  MEMORY_VALUE[5]=2 (0010)
+
+State 2176 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2834 function main thread 0
+----------------------------------------------------
+  pc[3]=128 (10000000)
+
+State 2177 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2838 function main thread 0
+----------------------------------------------------
+  thread_index=0 (0000)
+
+State 2182 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=0 (00000000)
+
+State 2187 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2840 function main thread 0
+----------------------------------------------------
+  pc_cs=3 (000000011)
+
+State 2200 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2843 function main thread 0
+----------------------------------------------------
+  pc[0]=3 (00000011)
+
+State 2201 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2846 function main thread 0
+----------------------------------------------------
+  thread_index=1 (0001)
+
+State 2206 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=53 (00110101)
+
+State 2211 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2848 function main thread 0
+----------------------------------------------------
+  pc_cs=127 (001111111)
+
+State 2215 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2850 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread0_arg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 2293 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 655 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=2 (0010)
+
+State 2294 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 655 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (0001)
+
+State 2295 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 209 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=2 (0010)
+
+State 2296 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 210 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=1 (0001)
+
+State 2299 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 656 function thread0_0 thread 0
+----------------------------------------------------
+  __retval__Pop0_1=0 (00000000000000000000000000000000)
+
+State 2302 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 738 function thread0_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread0_elem=0 (00000000000000000000000000000000)
+
+State 2320 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2851 function main thread 0
+----------------------------------------------------
+  pc[1]=127 (01111111)
+
+State 2321 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2854 function main thread 0
+----------------------------------------------------
+  thread_index=2 (0010)
+
+State 2326 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=49 (00110001)
+
+State 2331 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2856 function main thread 0
+----------------------------------------------------
+  pc_cs=128 (010000000)
+
+State 2335 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2858 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread1_arg=NULL + 1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 2418 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1502 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_obj=1 (0001)
+
+State 2419 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1502 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_expected=&__csLOCAL_Pop1_head21 (0010010100000000000000000000000000000000000000000000000000000000)
+
+State 2420 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1502 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_compare_and_exchange_desired=0 (0000)
+
+State 2422 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 187 function __CS_atomic_compare_and_exchange thread 0
+----------------------------------------------------
+  MEMORY_VALUE[1]=0 (0000)
+
+State 2426 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1502 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_Pop1___if_cond_1=TRUE (00000001)
+
+State 2431 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1505 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_obj=2 (0010)
+
+State 2432 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1505 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCALPARAM___CS_atomic_fetch_sub_v=1 (0001)
+
+State 2433 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 209 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  __csLOCAL___CS_atomic_fetch_sub_old=1 (0001)
+
+State 2434 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 210 function __CS_atomic_fetch_sub thread 0
+----------------------------------------------------
+  MEMORY_VALUE[2]=0 (0000)
+
+State 2437 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1506 function thread1_0 thread 0
+----------------------------------------------------
+  __retval__Pop1_1=1 (00000000000000000000000000000001)
+
+State 2440 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1557 function thread1_0 thread 0
+----------------------------------------------------
+  __csLOCAL_thread1_elem=1 (00000000000000000000000000000001)
+
+State 2444 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 1793 function thread1_0 thread 0
+----------------------------------------------------
+  MEMORY_VALUE[5]=1 (0001)
+
+State 2459 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2859 function main thread 0
+----------------------------------------------------
+  pc[2]=128 (10000000)
+
+State 2460 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2862 function main thread 0
+----------------------------------------------------
+  thread_index=3 (0011)
+
+State 2465 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 157 function guess_pc thread 0
+----------------------------------------------------
+  i=1 (00000001)
+
+State 2470 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2864 function main thread 0
+----------------------------------------------------
+  pc_cs=129 (010000001)
+
+State 2474 file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2866 function main thread 0
+----------------------------------------------------
+  __csLOCALPARAM_thread2_arg=NULL + 2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+Violated property:
+  file regression/pointertranslation/safestack_mem_ver6_nolocal_bitvector_nostackvar.c line 2613 function thread2_0
+  assertion (signed int)MEMORY_VALUE[(signed long int)((signed int)MEMORY_VALUE[(signed long int)0] + 2 * __csLOCAL_thread2_elem + 0)] == __csLOCAL_thread2_idx
+  (signed int)MEMORY_VALUE[(signed long int)((signed int)MEMORY_VALUE[(signed long int)0] + 2 * __csLOCAL_thread2_elem + 0)] == __csLOCAL_thread2_idx
+
+VERIFICATION FAILED
+
+real  78m44.720s
+user  78m34.332s
+sys 0m3.707s

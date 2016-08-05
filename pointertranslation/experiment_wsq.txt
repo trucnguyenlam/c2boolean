@@ -1,0 +1,42 @@
+int main(void) {
+  // round 0
+  thread_index = 0;
+  pc_cs = 1;
+  // assume((pc_cs > 0) && (pc_cs <= 307));
+  main_thread();
+  pc[0] = pc_cs;
+
+  thread_index = 1;
+  if (active_thread[1] == 1) { /** Stealer_0 **/
+    pc_cs = 26;
+    // assume((pc_cs >= 0) && (pc_cs <= 29));
+    Stealer_0(threadargs[1]);
+    pc[1] = pc_cs;
+  }
+
+  // round 1
+  thread_index = 0;
+  if (active_thread[0] == 1) { /** main **/
+    pc_cs = 282;
+    // assume((pc_cs >= pc[0]) && (pc_cs <= 307));
+    main_thread();
+    pc[0] = pc_cs;
+  }
+
+  thread_index = 1;
+  if (active_thread[1] == 1) { /** Stealer_0 **/
+    pc_cs = 29;
+    // assume((pc_cs >= pc[1]) && (pc_cs <= 29));
+    Stealer_0(threadargs[1]);
+    pc[1] = pc_cs;
+  }
+
+  thread_index = 0;
+  if (active_thread[0] == 1) {
+    pc_cs = 305;
+    // assume((pc_cs >= pc[0]) && (pc_cs <= 307));
+    main_thread();
+  }
+
+  return 0;
+}

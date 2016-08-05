@@ -1,0 +1,615 @@
+cbmc-5.2 merge_sort_false-unreach-call_Mem_ver2.c --unwind 7 --no-unwinding-assertions
+
+
+--------------------------------------------------------------------------------
+
+
+CBMC version 5.2 64-bit x86_64 linux
+Parsing merge_sort_false-unreach-call_Mem_ver2.c
+file <command-line> line 0: <command-line>:0:0: warning: "__STDC_VERSION__" redefined
+file <command-line> line 0: <built-in>: note: this is the location of the previous definition
+Converting
+Type-checking merge_sort_false-unreach-call_Mem_ver2
+file merge_sort_false-unreach-call_Mem_ver2.c line 287 function inspect_before: function `assert' is not declared
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+Unwinding loop main.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 356 function main thread 0
+Unwinding loop main.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 356 function main thread 0
+Unwinding loop main.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 356 function main thread 0
+Unwinding loop main.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 356 function main thread 0
+Unwinding loop main.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 356 function main thread 0
+Unwinding loop main.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 356 function main thread 0
+Not unwinding loop main.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 356 function main thread 0
+Unwinding loop inspect_before.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 290 function inspect_before thread 0
+Unwinding loop inspect_before.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 290 function inspect_before thread 0
+Unwinding loop inspect_before.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 290 function inspect_before thread 0
+Unwinding loop inspect_before.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 290 function inspect_before thread 0
+Unwinding loop inspect_before.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 290 function inspect_before thread 0
+Unwinding loop inspect_before.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 290 function inspect_before thread 0
+Not unwinding loop inspect_before.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 290 function inspect_before thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop seq_sort_core.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop main.1 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 416 function main thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop seq_sort_core.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop main.1 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 416 function main thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop seq_sort_core.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop main.1 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 416 function main thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop seq_sort_core.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop main.1 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 416 function main thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop seq_sort_core.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop main.1 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 416 function main thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop seq_sort_core.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop main.1 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 416 function main thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop seq_sort_core.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Unwinding loop merge_pair.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Unwinding loop merge_pair.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop merge_pair.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 206 function merge_pair thread 0
+Not unwinding loop seq_sort_core.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 231 function seq_sort_core thread 0
+Not unwinding loop main.1 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 416 function main thread 0
+Unwinding loop inspect_after.0 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 335 function inspect_after thread 0
+Unwinding loop inspect_after.0 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 335 function inspect_after thread 0
+Unwinding loop inspect_after.0 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 335 function inspect_after thread 0
+Unwinding loop inspect_after.0 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 335 function inspect_after thread 0
+Unwinding loop inspect_after.0 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 335 function inspect_after thread 0
+Unwinding loop inspect_after.0 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 335 function inspect_after thread 0
+Not unwinding loop inspect_after.0 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 335 function inspect_after thread 0
+Unwinding loop main.2 iteration 1 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 434 function main thread 0
+Unwinding loop main.2 iteration 2 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 434 function main thread 0
+Unwinding loop main.2 iteration 3 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 434 function main thread 0
+Unwinding loop main.2 iteration 4 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 434 function main thread 0
+Unwinding loop main.2 iteration 5 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 434 function main thread 0
+Unwinding loop main.2 iteration 6 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 434 function main thread 0
+Not unwinding loop main.2 iteration 7 (7 max) file merge_sort_false-unreach-call_Mem_ver2.c line 434 function main thread 0
+size of program expression: 158429 steps
+simple slicing removed 531 assignments
+Generated 43 VCC(s), 43 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.0 with simplifier
+20707726 variables, 99911855 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 1153.87s
+Building error trace
+
+Counterexample:
+
+State 25 file merge_sort_false-unreach-call_Mem_ver2.c line 24 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS_tmp={ 256, 272, 276, 278, 394, 414, 424, 425, 683, 741, 745, 748, 809 } ({ 00000000000000000000000100000000, 00000000000000000000000100010000, 00000000000000000000000100010100, 00000000000000000000000100010110, 00000000000000000000000110001010, 00000000000000000000000110011110, 00000000000000000000000110101000, 00000000000000000000000110101001, 00000000000000000000001010101011, 00000000000000000000001011100101, 00000000000000000000001011101001, 00000000000000000000001011101100, 00000000000000000000001100101001 })
+
+State 26 file merge_sort_false-unreach-call_Mem_ver2.c line 25 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[0]=0 (00000000000000000000000000000000)
+
+State 27 file merge_sort_false-unreach-call_Mem_ver2.c line 26 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[1]=1 (00000000000000000000000000000001)
+
+State 28 file merge_sort_false-unreach-call_Mem_ver2.c line 27 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[2]=2 (00000000000000000000000000000010)
+
+State 29 file merge_sort_false-unreach-call_Mem_ver2.c line 28 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[3]=3 (00000000000000000000000000000011)
+
+State 30 file merge_sort_false-unreach-call_Mem_ver2.c line 29 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[4]=4 (00000000000000000000000000000100)
+
+State 31 file merge_sort_false-unreach-call_Mem_ver2.c line 30 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[5]=5 (00000000000000000000000000000101)
+
+State 32 file merge_sort_false-unreach-call_Mem_ver2.c line 31 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[6]=6 (00000000000000000000000000000110)
+
+State 33 file merge_sort_false-unreach-call_Mem_ver2.c line 32 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[7]=7 (00000000000000000000000000000111)
+
+State 34 file merge_sort_false-unreach-call_Mem_ver2.c line 33 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[8]=8 (00000000000000000000000000001000)
+
+State 35 file merge_sort_false-unreach-call_Mem_ver2.c line 34 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[9]=9 (00000000000000000000000000001001)
+
+State 36 file merge_sort_false-unreach-call_Mem_ver2.c line 35 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[10]=10 (00000000000000000000000000001010)
+
+State 37 file merge_sort_false-unreach-call_Mem_ver2.c line 36 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[11]=11 (00000000000000000000000000001011)
+
+State 38 file merge_sort_false-unreach-call_Mem_ver2.c line 37 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[12]=12 (00000000000000000000000000001100)
+
+State 39 file merge_sort_false-unreach-call_Mem_ver2.c line 38 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[13]=13 (00000000000000000000000000001101)
+
+State 40 file merge_sort_false-unreach-call_Mem_ver2.c line 39 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[14]=14 (00000000000000000000000000001110)
+
+State 41 file merge_sort_false-unreach-call_Mem_ver2.c line 40 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[15]=15 (00000000000000000000000000001111)
+
+State 42 file merge_sort_false-unreach-call_Mem_ver2.c line 41 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[16]=16 (00000000000000000000000000010000)
+
+State 43 file merge_sort_false-unreach-call_Mem_ver2.c line 42 function init_MEM thread 0
+----------------------------------------------------
+  num_malloc=17 (00000000000000000000000000010001)
+
+State 44 file merge_sort_false-unreach-call_Mem_ver2.c line 43 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[17]=256 (00000000000000000000000100000000)
+
+State 46 file merge_sort_false-unreach-call_Mem_ver2.c line 45 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[18]=272 (00000000000000000000000100010000)
+
+State 48 file merge_sort_false-unreach-call_Mem_ver2.c line 47 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[19]=276 (00000000000000000000000100010100)
+
+State 50 file merge_sort_false-unreach-call_Mem_ver2.c line 49 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[20]=278 (00000000000000000000000100010110)
+
+State 52 file merge_sort_false-unreach-call_Mem_ver2.c line 51 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[21]=394 (00000000000000000000000110001010)
+
+State 54 file merge_sort_false-unreach-call_Mem_ver2.c line 53 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[22]=414 (00000000000000000000000110011110)
+
+State 56 file merge_sort_false-unreach-call_Mem_ver2.c line 55 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[23]=424 (00000000000000000000000110101000)
+
+State 58 file merge_sort_false-unreach-call_Mem_ver2.c line 57 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[24]=425 (00000000000000000000000110101001)
+
+State 60 file merge_sort_false-unreach-call_Mem_ver2.c line 59 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[25]=683 (00000000000000000000001010101011)
+
+State 62 file merge_sort_false-unreach-call_Mem_ver2.c line 61 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[26]=741 (00000000000000000000001011100101)
+
+State 64 file merge_sort_false-unreach-call_Mem_ver2.c line 63 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[27]=745 (00000000000000000000001011101001)
+
+State 66 file merge_sort_false-unreach-call_Mem_ver2.c line 65 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[28]=748 (00000000000000000000001011101100)
+
+State 68 file merge_sort_false-unreach-call_Mem_ver2.c line 67 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[29]=809 (00000000000000000000001100101001)
+
+State 70 file merge_sort_false-unreach-call_Mem_ver2.c line 69 function init_MEM thread 0
+----------------------------------------------------
+  TRACK_ADDRESS[30]=1001 (00000000000000000000001111101001)
+
+State 72 file merge_sort_false-unreach-call_Mem_ver2.c line 353 function main thread 0
+----------------------------------------------------
+  TRACK_VALUE[0]=0 (00000000000000000000000000000000)
+
+State 73 file merge_sort_false-unreach-call_Mem_ver2.c line 354 function main thread 0
+----------------------------------------------------
+  TRACK_VALID[0]=FALSE (00000000)
+
+State 79 file merge_sort_false-unreach-call_Mem_ver2.c line 412 function main thread 0
+----------------------------------------------------
+  shape=0 (00000000000000000000000000000000)
+
+State 80 file merge_sort_false-unreach-call_Mem_ver2.c line 284 function inspect_before thread 0
+----------------------------------------------------
+  TRACK_VALUE[5]=0 (00000000000000000000000000000000)
+
+Violated property:
+  file merge_sort_false-unreach-call_Mem_ver2.c line 287 function inspect_before
+  assertion TRACK_VALUE[(signed long int)5]
+  (_Bool)TRACK_VALUE[(signed long int)5]
+
+VERIFICATION FAILED
