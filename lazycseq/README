@@ -1,0 +1,44 @@
+
+              Lazy-CSeq (CSeq 1.1)
+              October 2015
+
+
+   * Package contents *
+
+README            this file
+
+cseq.py           CSeq command-line front-end
+
+core/             CSeq core framework
+modules/          modules and configuration files
+
+examples/         example files.
+
+
+   * Installation *
+
+To install Lazy-CSeq, please follow the steps below:
+
+    1. install the dependencies:
+        - Python 2.7
+        - PYCparser 2.14
+        - backends: CBMC (latest version is recommended)
+
+    2. create a directory, suppose this is called /workspace
+
+    3. extract the entire package contents in /workspace
+
+    4. set execution (+x) permissions for cseq.py
+
+    5. make sure that the backend's binary is in the search path, or
+       amend the command strings in modules/feeder.py, sect. Options and Parameters,
+       accordingly.
+
+
+   * Usage *
+
+To try Lazy-CSeq, please use the following command:
+
+    ./cseq.py  -i examples/lazy_unsafe.c
+
+which should report the file to be unsafe.
