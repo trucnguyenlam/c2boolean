@@ -2,4 +2,5 @@
 debugpath = 'log'
 
 # default analysis
-defaultchain = 'lazy'
+# defaultchain = 'lazy'
+defaultchain = 'c2boolean'

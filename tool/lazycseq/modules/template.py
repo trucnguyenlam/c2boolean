@@ -3,7 +3,7 @@ import pycparser.c_parser, pycparser.c_ast, pycparser.c_generator
 import core.module, core.parser, core.utils
 
 
-class prova(core.module.Translator):
+class template(core.module.Translator):
 	def visit_UnaryOp(self, n):
 		operand = self._parenthesize_unless_simple(n.expr)
 
