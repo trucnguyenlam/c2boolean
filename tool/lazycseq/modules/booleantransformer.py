@@ -5,9 +5,13 @@ VERSION = '0.1'
 """
 
 Transformation:
-	- syntax
-	- variables
+	- syntax transformation
+	- variables transformation
+		any type  -->   boolean type
+
 	- C concurrent to Boolean concurrent
+		POSIX thread --> boolean thread
+		mutex   -->  atomic lock
 
 
 Limitations:
@@ -23,7 +27,7 @@ Prerequisites:
 	- no two threads refers to the same thread function (use module duplicator.py)
 
 TODO:
-	-
+	- based on ../dev/labelerRCInterproc.py
 
 Changelog:
 	2016.08.08  Intial version

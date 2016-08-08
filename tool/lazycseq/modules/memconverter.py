@@ -5,7 +5,7 @@ VERSION = '0.1'
 """
 
 Transformation:
-
+	- Convert pointer and pointer operation to READ and WRITE to a memory model
 
 Limitations:
 	-
@@ -14,7 +14,8 @@ Prerequisites:
 	-
 
 TODO:
-	-
+	- Base on ../dev/labelerRC_MEM.py
+
 
 Changelog:
 	2016.08.08  Intial version

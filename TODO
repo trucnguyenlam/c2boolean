@@ -1,9 +1,11 @@
 - Translation of concurrent C programs (with only scalar) to Concurrent Boolean Program
- + @Truc: prepare the translation platform (Lazy-CSeq)
+  + @Truc: prepare the translation platform (Lazy-CSeq)
+  + Modifying tool/lazycseq/modules/booleantransformer.py
 
 - Translation of pointers & arrays to memory model (need Gennaro's advice)
+  + Modifying tool/lazycseq/modules/memconverter.py
 
 - Translation of memory model to boolean program
-
+  + Modifying tool/lazycseq/modules/booleantransformer.py
 - Testing the translation on SV-COMP benchmarks
 
