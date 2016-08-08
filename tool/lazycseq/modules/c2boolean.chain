@@ -1,6 +1,6 @@
-# fastest lazy-cseq (round-based) encoding so far:
+# Chain modules for translation from C to Boolean programs
 # SVCOMP15 bitvectors + CAV14 constraints in the main driver
-#
+#     '#' for commenting out
 
 workarounds
 functiontracker
@@ -22,7 +22,11 @@ duplicator
 
 # sequentialization
 condwaitconverter
-lazyseq
+
+# boolean translation
+# memconverter
+booleantransformer
+
 
 # instrumentation
 #instrumenter
