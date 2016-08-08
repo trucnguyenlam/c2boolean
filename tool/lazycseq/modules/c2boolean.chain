@@ -1,6 +1,5 @@
 # Chain modules for translation from C to Boolean programs
-# SVCOMP15 bitvectors + CAV14 constraints in the main driver
-#     '#' for commenting out
+#
 
 workarounds
 functiontracker
@@ -24,7 +23,7 @@ duplicator
 condwaitconverter
 
 # boolean translation
-# memconverter
+memconverter
 booleantransformer
 
 
