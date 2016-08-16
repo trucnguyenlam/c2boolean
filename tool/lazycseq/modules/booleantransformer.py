@@ -81,8 +81,8 @@ TODO:
 
 
 	 	-- Expression level --
-	 	+ arithmetic operation
-	 	+ access to global variable (write or read) - handle in the future
+	 	+ arithmetic operation (take a lot of time)
+	 	+ (future) access to global variable (write or read) - handle in the future
 
 Changelog:
 	2016.08.08  Intial version
@@ -98,7 +98,7 @@ class booleantransformer(core.module.Translator):
 		''' Initialization of a module, please refer to core.module.Translator
 			Use two function to set (optional) input or output of this module
 		'''
-		# self.addInputParam(self,id,description,datatype,default,optional)
+		# self.addInputParam(self, "numbit", "u", datatype,default,optional)
 		# self.addOutputParam(self,id,description='',datatype='')
 		pass
 
@@ -116,3 +116,9 @@ class booleantransformer(core.module.Translator):
 
 	# TODO: write custom translator, please refer to dev/c_generator.py to know how a node can be rewritten (in C)
 	#
+	#
+
+    # def visit_FuncDef(): for thread
+
+
+    # def visit_Decl(...): for declaration
