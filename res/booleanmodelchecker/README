@@ -1,0 +1,10 @@
+This is the copy of GetAFix tool by Gennaro in CAV10 paper
+
+Please launch the tool (translation from boolean program to MUCKE program) with this commands:
+
+./a.out BOOLEAN_PROGRAM 4 SLIC_ERROR > ANYFILENAME.mu
+For examples:
+    ./a.out examples/001/satabs.1.bp 4 SLIC_ERROR > some.mu
+
+If there is error here, it is likely because of syntax violations.
+
